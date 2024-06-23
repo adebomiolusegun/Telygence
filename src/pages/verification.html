@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/src/styles/output.css">
+</head>
+
+<body class="mobile-bg md:bg m-w-[100vw] m-h-[100vh] overflow-x-hidden">
+  <section class=" flex items-center flex-col h-screen  md:justify-center">
+
+    <!--signup container-->
+    <div
+      class=" w-[90%] h-auto  flex items-center flex-col rounded-3xl md:shadow-lg  md:row md:border-2 md:w-4/5 md:bg-white lg:items-center">
+      <div class="  md:px-0  flex flex-col items-center md:w-4/5 space-y-8 ">
+        <!--logo-->
+        <div class="pt-10">
+          <img src="/src/assets/images/logo.png" alt="">
+        </div>
+        <!--verify account font-->
+        <div class="text-center space-y-4">
+          <h4 class="font-semibold text-[18px] md:text-[22px] leading[22.72px]">Verify your account</h4>
+          <div class="w-[18rem] md:w-full">
+            <p class="pb-4 font-[300] text-[15px] md:text-[15px] leading[18.9px]">Please check your email address for
+              the code we sent.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col  items-center space-y-10 pb-10">
+          <div class="w-[271px] h-[19px] font-normal text-center text-[15px]">
+            <p>Enter verification code</p>
+          </div>
+
+
+          <div class="flex gap-2.5 self-center md:gap-6 vsm:gap-2">
+            <input type="text" class="verificationinput" id="input1">
+            <input type="text" class="verificationinput" id="input2">
+            <input type="text" class="verificationinput" id="input3">
+            <input type="text" class="verificationinput" id="input4">
+            <input type="text" class="verificationinput" id="input5">
+            <input type="text" class="verificationinput" id="input6">
+          </div>
+
+
+          <div class="w-full  pb-10">
+            <a href="reset-password.html" class="onbordingbutton w-full text-center block ">Verify</a>
+          </div>
+
+
+
+          <div class="flex flex-col space-y-28">
+            <div class="flex text-[15px] font-normal text-gray300 md:flex md:flex-row">
+              <p class="text-signupintruction font-normal text-[15px] leading-[20.16px]">Didn’t receive code?</p>
+              <a href="#" class="text-Logincolor">Resend</a>
+            </div>
+
+            <div class="self-center pb-12">
+              <p class="text-Logincolor">Change email address</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </section>
+</body>
+
+</html>

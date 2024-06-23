@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/src/styles/output.css">
+</head>
+
+<body>
+  <main class="">
+    <!-- header  -->
+    <header class="h-screen mobile-bg md:bg overflow-x-hidden">
+      <nav class="relative  mx-auto p-6">
+
+        <!--flex container-->
+        <div class="flex items-center justify-between">
+          <!---->
+          <div>
+            <img src="/src/assets/images/logo.png" alt="">
+          </div>
+          <!--menu items-->
+          <div class="hidden md:flex space-x-10 justify-center  w-[60%]">
+            <a href="">features</a>
+            <a href="">sync with app</a>
+            <a href="">pricing</a>
+            <a href="">service</a>
+            <a href="">support</a>
+          </div>
+          <!--button-->
+          <div>
+            <button class=" hidden md:flex get-extension-btn">Get
+              Extension</button>
+          </div>
+          <svg class="w-12 flex md:hidden" id="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+          </svg>
+
+          <svg class=" hidden md:hidden w-8" id="close-menu" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+
+        </div>
+        <!--mobile menu-->
+
+        <div class=" absolute hidden md:hidden h-screen" id="mobile-menu">
+          <div class=" pt-10 absolute w-full items-start flex flex-col space-y-10 bg-black justify-start ">
+            <a href="" class="dropdown-li-bg">features</a>
+            <a href="" class="dropdown-li-bg">sync with app</a>
+            <a href="" class="dropdown-li-bg">pricing</a>
+            <a href="" class="dropdown-li-bg">service</a>
+            <a href="" class="dropdown-li-bg">support</a>
+
+            <div class=" button text-center w-44">
+              <a href="">Get Extension</a>
+            </div>
+          </div>
+
+
+        </div>
+
+      </nav>
+
+      <article class="  mx-auto p-6 items-center flex flex-col space-y-12 md:items-start" id="article">
+        <div>
+          <img src="/src/assets/images/trynow.png" alt="">
+        </div>
+
+        <!--Article write up-->
+        <div class="article-texts ">
+          <h3><span class="text-Btngradianttwo">Boost</span> your productivity with Telygence <span
+              class="text-blue400">AI</span></h3>
+        </div>
+
+        <div class="w-60 text-center md:text-start md:w-[520px]">
+          <p>Tired of typing the same messages over and over? Telygence AI says buh-bye to repetitive typing! Just one
+            click and you're done.</p>
+        </div>
+
+        <div class="flex items-center space-x-5 ">
+          <div class="articlebtn px-9 py-3">
+            <a href="">Get Extension</a>
+          </div>
+
+          <div class="hidden md:flex ring-2 rounded-3xl px-9 py-3 ring-Btngradianttwo">
+            <a href="">Get Extension</a>
+          </div>
+        </div>
+
+      </article>
+    </header>
+
+  </main>
+
+
+  <script src="/src/scripts/script.js"></script>
+</body>
+
+</html>

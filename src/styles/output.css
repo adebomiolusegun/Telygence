@@ -1324,14 +1324,14 @@ video {
 }
 
 .bg {
-  background-image: url(/src/assets/images/Vector.png);
+  background-image: url(../assets/images/Vector.png);
   background-repeat: no-repeat;
   background-size: center;
   z-index: -1;
 }
 
 .mobile-bg {
-  background-image: url(/src/assets/images/mobile-bg.png);
+  background-image: url(../assets/images/mobile-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;

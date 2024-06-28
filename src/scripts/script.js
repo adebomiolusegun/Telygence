@@ -4,8 +4,12 @@ const mainMenu = document.getElementById("article");
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const closeMenu = document.getElementById("close-menu");
-// const verifyBtn = document.getElementById("verify");
-// const inputFields = document.querySelectorAll(".verificationinput");
+const showPassword = document.getElementById("showPassword");
+const hidePassword = document.getElementById("hidePassword");
+const getStartedIcon = document.getElementById("gettingStartedDropdownIcon");
+const getStartedDropdown = document.getElementById("gettingStartedDropdown");
+const menuItem = document.querySelectorAll("meunitem");
+const gettingStartedInput = document.getElementById("gettingStartedInput");
 
 menuBtn.addEventListener("click", function () {
   mobileMenu.classList.remove("hidden");
@@ -21,22 +25,12 @@ closeMenu.addEventListener("click", function () {
   menuBtn.classList.remove("hidden");
 });
 
-// const correctCode = 123456;
+showPassword.addEventListener("click", function () {
+  hidePassword.classList.remove("hidden");
+  showPassword.classList.add("hidden");
+});
 
-// verifyBtn.addEventListener("click", function () {
-//   let enteredCode = "";
-
-//   inputFields.forEach((input) => {
-//     enteredCode += input.value;
-//   });
-
-//   if (enteredCode !== correctCode) {
-//     inputFields.forEach((input) => {
-//       input.classList.add("verification-failed");
-//     });
-//   } else {
-//     inputFields.forEach((input) => {
-//       input.classList.remove("verification-failed");
-//     });
-//   }
-// });
+hidePassword.addEventListener("click", function () {
+  hidePassword.classList.add("hidden");
+  showPassword.classList.remove("hidden");
+});

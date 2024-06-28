@@ -65,3 +65,11 @@
 .get-extension-btn {
   @apply border-Btngradiantone bg-gradient-to-l from-Btngradianttwo via-Logincolortwo to-Btngradianttwo px-6 py-3 rounded-3xl;
 }
+
+.icon-hide-password {
+  @apply self-center stroke-slate-300 absolute;
+}
+
+.red-border {
+  @apply border-2 border-red-500;
+}

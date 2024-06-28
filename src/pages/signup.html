@@ -35,35 +35,57 @@
         <div class=" pb-8 md:mx-auto text-left align-middle w-full capitalize ">
 
           <!--email input-->
-          <div class="flex flex-col justify-around gap-10">
+          <div class="flex flex-col justify-around">
             <div class=" font-[13px] md:flex md:space-x-9">
               <p class=" w-[69px] font-[400] text-[13px] self-center">email</p>
-              <div class="inputdiv">
+              <div class="inputdiv red-border ">
                 <span class="material-symbols-outlined  self-center ml-2">
                   mail
                 </span>
-                <input type="text" class="input" placeholder="Enter your email address">
+                <input type="email" class="input" placeholder="Enter your email address">
               </div>
+
             </div>
+            <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] "> Please enter your email
+              address
+            </p>
+
+            <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] "> Please enter a valied email
+              address
+            </p>
 
             <!--password input-->
 
-            <div class=" font-[13px] md:flex md:space-x-9">
+            <div class=" relative font-[13px] md:flex md:space-x-9 pt-8">
               <p class="w-[69px] font-[400] text-[13px] self-center">password</p>
-              <div class="inputdiv flex flex-row align-middle">
+              <div class="inputdiv hidden:red-border  flex flex-row align-middle">
                 <span class="material-symbols-outlined self-center ml-2">
                   lock
                 </span>
-                <input type="text" class="input" placeholder="Create a new password">
-                <span class="material-symbols-outlined self-center mr-2 stroke-slate-300">
+                <input type="password" class="input" placeholder="Create a new password">
+                <span class=" material-symbols-outlined self-center mr-2 stroke-slate-300 cursor-pointer"
+                  id="showPassword">
                   visibility
                 </span>
+
+                <span class=" hidden material-symbols-outlined icon-hide-password  right-2" id="hidePassword">
+                  visibility_off
+                </span>
+
               </div>
             </div>
 
           </div>
-          <p class=" text-[10px] pt-1 text-Gray300 md:text-right md:text-[12px]">A combination of a letter, number and a
+          <p class=" text-[10px] pt-1 text-Gray300 md:text-right md:text-[12px] ">A combination of a letter,
+            number and a
             symbol please
+          </p>
+
+          <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px]"> Please create a new password
+          </p>
+
+          <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] "> Password should be a minimum of 6
+            characters
           </p>
         </div>
 
@@ -137,6 +159,8 @@
       </div>
     </div>
   </section>
+
+  <script src="/src/scripts/script.js"></script>
 </body>
 
 </html>

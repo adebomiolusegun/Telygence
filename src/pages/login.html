@@ -33,22 +33,32 @@
         <div class=" mb-8 md:mx-auto text-left align-middle w-full capitalize ">
 
           <!--email input-->
-          <div class="flex flex-col justify-around gap-10">
+          <div class="flex flex-col justify-around">
             <div class=" font-[13px] md:flex md:space-x-9">
               <p class=" w-[69px] font-[400] text-[13px] self-center">email</p>
-              <div class="inputdiv">
+              <div class="inputdiv hidden:red-border ">
                 <span class="material-symbols-outlined  self-center ml-2">
                   mail
                 </span>
                 <input type="text" class="input" placeholder="Enter your email address">
               </div>
             </div>
+            <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] hidden"> Please enter your email
+              address
+            </p>
 
+            <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] "> Account with email not found
+            </p>
             <!--password input-->
 
-            <div class=" font-[13px] md:flex md:space-x-9">
-              <p class="w-[69px] font-[400] text-[13px] self-center">password</p>
-              <div class="inputdiv flex flex-row align-middle">
+            <div class=" relative font-[13px] md:flex md:space-x-9 pt-6">
+              <div class="flex">
+                <p class="w-[69px] font-[400] text-[13px] self-center">password</p>
+                <p class=" md:hidden text-[12px] pt-1 text-blue-600 ml-auto">
+                  Forgot password?
+                </p>
+              </div>
+              <div class="inputdiv hidden:red-border flex flex-row align-middle">
                 <span class="material-symbols-outlined self-center ml-2">
                   lock
                 </span>
@@ -56,13 +66,23 @@
                 <span class="material-symbols-outlined self-center mr-2 stroke-slate-300">
                   visibility
                 </span>
+
+                <span class=" hidden material-symbols-outlined icon-hide-password  right-2">
+                  visibility_off
+                </span>
               </div>
             </div>
 
           </div>
-          <p class=" text-[10px] pt-1 text-Gray300 md:text-right md:text-[12px]">A combination of a letter, number and a
-            symbol please
-          </p>
+          <div class="flex items-end">
+            <p class=" hidden md:flex text-[10px] pt-1 text-blue-600  md:text-[12px] ml-auto"> Forgot
+              password?
+            </p>
+            <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] hidden "> Please enter your password
+            </p>
+            <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px]  "> Incorrect password
+            </p>
+          </div>
         </div>
 
         <div class="flex items-center flex-col w-full gap-6 pb-10">

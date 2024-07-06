@@ -15,7 +15,7 @@
       class="border border-gray-300 rounded-lg py-2 px-4 w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500"
       placeholder="Enter your password">
     <button id="togglePassword" type="button"
-      class="absolute inset-y-0 right-0 flex items-center px-4 text-gray-600 focus:outline-none">
+      class="border-4 border-red-500 absolute inset-y-0 right-0 flex items-center px-4 text-gray-600 focus:outline-none">
       <svg id="showIcon" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
         stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -29,6 +29,8 @@
       </svg>
     </button>
   </div>
+
+
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -48,6 +50,53 @@
           hideIcon.classList.add("hidden");
         }
       });
+    });
+  </script>
+
+
+  <div class="font-[13px] md:flex md:space-x-9">
+    <p class="w-[69px] font-[400] text-[13px] self-center">email</p>
+    <div class="inputdiv hidden:red-border flex flex-row align-middle">
+      <span class="material-symbols-outlined self-center ml-2">
+        mail
+      </span>
+      <input id="emailInput" type="email" class="input" placeholder="Enter your email address">
+    </div>
+  </div>
+  <p id="emptyEmail" class="hidden text-[10px] pt-1 text-red-500 md:text-right md:text-[12px]">Please enter your email
+    address</p>
+  <p id="invalidEmail" class="hidden text-[10px] pt-1 text-red-500 md:text-right md:text-[12px]">Please enter a valid
+    email address</p>
+  <a id="authenticationBtn" href="#" class="onbordingbutton w-full text-center">create an account</a>
+
+  <script>
+    const authenticationBtn = document.getElementById("authenticationBtn");
+    const emailInput = document.getElementById("emailInput");
+    const emptyEmail = document.getElementById("emptyEmail");
+    const invalidEmail = document.getElementById("invalidEmail");
+
+    authenticationBtn.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent the default link behavior
+
+      if (emailInput) {
+        if (emailInput.value === "") {
+          emptyEmail.classList.remove("hidden");
+          emailInput.classList.add("bg-red-500"); // Add a class to set the background color to red
+        } else {
+          emptyEmail.classList.add("hidden");
+          emailInput.classList.remove("bg-red-500"); // Remove the background color class if input is not empty
+
+          // Optional: Add validation for email format if needed
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(emailInput.value)) {
+            invalidEmail.classList.remove("hidden");
+            emailInput.classList.add("bg-red-500"); // Add red background if email is invalid
+          } else {
+            invalidEmail.classList.add("hidden");
+            emailInput.classList.remove("bg-red-500"); // Remove red background if email is valid
+          }
+        }
+      }
     });
   </script>
 

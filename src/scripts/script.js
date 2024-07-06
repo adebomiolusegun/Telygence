@@ -4,8 +4,17 @@ const mainMenu = document.getElementById("article");
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const closeMenu = document.getElementById("close-menu");
-// const showPassword = document.getElementById("showPassword");
-// const hidePassword = document.getElementById("hidePassword");
+const passwordInput = document.getElementById("passwordInput");
+const redBorder = document.getElementById("borderRed");
+const emailInput = document.querySelector("emailInput");
+const emptyEmail = document.querySelector("emptyEmail");
+const invalidEmail = document.getElementById("invalidEmail");
+const authenticationBtn = document.getElementById("authenticationBtn");
+const togglePassword = document.getElementById("togglePassword");
+const showIcon = document.getElementById("showIcon");
+const hideIcon = document.getElementById("hideIcon");
+const passwordLength = document.getElementById("passwordLength");
+const passwordInstruction = document.getAnimations("passwordInstruction");
 const getStartedIcon = document.getElementById("gettingStartedDropdownIcon");
 const getStartedDropdown = document.getElementById("gettingStartedDropdown");
 const menuItem = document.querySelectorAll(".menu-item");
@@ -33,19 +42,62 @@ const openDropDown = () => {
   getStartedDropdown.classList.toggle("hidden");
 };
 
-menuItem.forEach((items) => {
-  items.addEventListener("click", () => {
-    gettingStartedInput.value = items.textContent;
-    getStartedDropdown.classList.add("hidden");
+if (menuItem) {
+  menuItem.forEach((items) => {
+    items.addEventListener("click", () => {
+      gettingStartedInput.value = items.textContent;
+      getStartedDropdown.classList.add("hidden");
+    });
   });
-});
+}
 
-// showPassword.addEventListener("click", function () {
-//   hidePassword.classList.remove("hidden");
-//   showPassword.classList.add("hidden");
-// });
+if (togglePassword) {
+  togglePassword.addEventListener("click", function () {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      showIcon.classList.add("hidden");
+      hideIcon.classList.remove("hidden");
+      passwordInstruction.classList.remove("hidden");
+    } else {
+      passwordInput.type = "password";
+      hideIcon.classList.add("hidden");
+      showIcon.classList.remove("hidden");
+    }
+  });
+}
 
-// hidePassword.addEventListener("click", function () {
-//   hidePassword.classList.add("hidden");
-//   showPassword.classList.remove("hidden");
-// });
+if (emailInput && passwordInput) {
+  authenticationBtn.addEventListener("click", function () {
+    if (emailInput.value === "" || passwordInput.value === "") {
+      redBorder.classList.remove("hidden");
+      emptyEmail.classList.remove("hidden");
+    } else {
+      redBorder.classList.add("hidden");
+      emptyEmail.classList.add("hidden");
+    }
+  });
+}
+
+if (emailInput) {
+  const emailValidation = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{6,}$/;
+
+  emailInput.addEventListener("input", function () {
+    if (!emailValidation.test(emailInput.value)) {
+      invalidEmail.classList.remove("hidden");
+    } else {
+      invalidEmail.classList.add("hidden");
+    }
+  });
+}
+
+if (passwordInput) {
+  const passValidation = /^(?=.*\d)(?=.*[a-z]).{6,}$/;
+
+  passwordInput.addEventListener("input", function () {
+    if (!passValidation.test(passwordInput.value)) {
+      passwordLength.classList.remove("hidden");
+    } else {
+      passwordLength.classList.add("hidden");
+    }
+  });
+}

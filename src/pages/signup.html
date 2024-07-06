@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../styles/output.css">
 </head>
 
-<body class="mobile-bg md:bg m-w-[100vw] m-h-[100vh] overflow-x-hidden">
+<body class="mobile-bg md:bg m-w-[100vw] m-h-[100vh] overflow-hidden">
   <section class="flex items-center flex-col  md:justify-center h-screen w-screen">
 
     <!--signup container-->
@@ -38,19 +38,22 @@
           <div class="flex flex-col justify-around">
             <div class=" font-[13px] md:flex md:space-x-9">
               <p class=" w-[69px] font-[400] text-[13px] self-center">email</p>
-              <div class="inputdiv red-border ">
+              <div id="borderRed" class="inputdiv hidden:red-border">
                 <span class="material-symbols-outlined  self-center ml-2">
                   mail
                 </span>
-                <input type="email" class="input" placeholder="Enter your email address">
+                <input id="emailInput" type="email" class="input" placeholder="Enter your email address">
               </div>
 
             </div>
-            <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] "> Please enter your email
+            <p id="emptyEmail" class=" hidden text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] "> Please enter
+              your email
               address
             </p>
 
-            <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] "> Please enter a valied email
+            <p id="invalidEmail" class=" hidden text-[10px] pt-1 text-red-500 md:text-right md:text-[12px]"> Please
+              enter a valied
+              email
               address
             </p>
 
@@ -58,33 +61,41 @@
 
             <div class=" relative font-[13px] md:flex md:space-x-9 pt-8">
               <p class="w-[69px] font-[400] text-[13px] self-center">password</p>
-              <div class="inputdiv hidden:red-border  flex flex-row align-middle">
-                <span class="material-symbols-outlined self-center ml-2">
+              <div class="inputdiv hidden:red-border  flex flex-row align-middle" id="borderRed">
+                <span class="material-symbols-outlined self-center ml-2 stroke-slate-300">
                   lock
                 </span>
-                <input type="password" class="input" placeholder="Create a new password">
-                <span class=" material-symbols-outlined self-center mr-2 stroke-slate-300 cursor-pointer"
-                  id="showPassword">
-                  visibility
-                </span>
+                <input type="password" class="input" placeholder="Create a new password" id="passwordInput"
+                  onclick="passwordInput">
 
-                <span class=" hidden material-symbols-outlined icon-hide-password  right-2" id="hidePassword">
-                  visibility_off
-                </span>
+                <button id="togglePassword" type="button" class="absolute focus:outline-none right-0">
+                  <span class=" material-symbols-outlined stroke-slate-300 cursor-pointer mr-[20px] pt-2" id="showIcon">
+                    visibility
+                  </span>
+                  <span class=" hidden material-symbols-outlined icon-hide-password cursor-pointer right-5 pt-2"
+                    id="hideIcon">
+                    visibility_off
+                  </span>
 
+                </button>
               </div>
             </div>
 
           </div>
-          <p class=" text-[10px] pt-1 text-Gray300 md:text-right md:text-[12px] ">A combination of a letter,
+          <p class=" hidden text-[10px] pt-1 text-Gray300 md:text-right md:text-[12px] " id="passwordInstruction">A
+            combination
+            of a letter,
             number and a
             symbol please
           </p>
 
-          <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px]"> Please create a new password
+          <p id="emptyPassword" class="text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] hidden"> Please create
+            a new password
           </p>
 
-          <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] "> Password should be a minimum of 6
+          <p id="passwordLength" class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] hidden"> Password
+            should be a minimum of
+            6
             characters
           </p>
         </div>
@@ -105,7 +116,8 @@
 
 
 
-        <a href="verification.html" class="onbordingbutton w-full text-center">create an account</a>
+        <a id="authenticationBtn" href="" class="onbordingbutton w-full text-center">create an
+          account</a>
 
 
         <div class="w-full flex flex-col gap-6 items-center pt-10">
@@ -159,6 +171,8 @@
       </div>
     </div>
   </section>
+
+
 
   <script src="../scripts/script.js"></script>
 </body>

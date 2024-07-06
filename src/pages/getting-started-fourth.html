@@ -76,82 +76,66 @@
 
           <div class="w-full relative pb-40 md:pb-20">
             <div class="w-full flex items-center justify-between ring-1 ring-Gray400 py-1 px-3 rounded-xl bg-white">
-              <input type="text" class="w-full mx-auto px-4 py-3 outline-none text-Gray200" placeholder="Product">
-              <svg class="ml-auto w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke-width="1.5" stroke="currentColor" class="size-6">
+              <input id="gettingStartedInput" type="text"
+                class="w-full mx-auto px-4 py-3 outline-none placeholder:text-Gray200" placeholder="Product">
+              <svg onclick="openDropDown()" class="ml-auto w-8  cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
 
             </div>
 
             <div
-              class=" hidden h-48 md:h-64 absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none overflow-y-scroll">
+              class=" hidden h-48 md:h-64 absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none overflow-y-scroll"
+              id="gettingStartedDropdown">
               <div class=" py-1" role="none" class="overflow-y-scroll">
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-0">Administrative</p>
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-1">Customer Support</p>
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Education</p>
-                <p class="text-gray-720 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Engineering</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Finance</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Founder/CEO</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Healthcare</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Human Resources</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Information Technology</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Legal</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Logistics</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Marketing</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Management</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Operations</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Product</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Quality Assurance</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Real Estate</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Recruiting</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Research</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Sales</p>
-
-                <p class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem" tabindex="-1"
-                  id="menu-item-2">Other</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Administrative</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Customer Support</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Education</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Engineering</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Finance</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Founder/CEO</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Healthcare</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Human Resources</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Information Technology</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Legal</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Logistics</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Marketing</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Management</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Operations</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Product</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Quality Assurance</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Real Estate</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Recruiting</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Research</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Sales</p>
+                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                  tabindex="-1">Other</p>
 
 
               </div>
             </div>
           </div>
-
 
           <div class=" w-full pb-10">
             <a href="index.html" class="onbordingbutton w-full text-center block ">Next</a>
@@ -164,6 +148,8 @@
 
       </div>
     </section>
+
+    <script src="../scripts/script.js"></script>
   </body>
 
 </html>

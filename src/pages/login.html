@@ -47,7 +47,7 @@
               address
             </p>
 
-            <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] "> Account with email not found
+            <p class=" hidden text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] "> Account with email not found
             </p>
             <!--password input-->
 
@@ -63,11 +63,13 @@
                   lock
                 </span>
                 <input type="text" class="input" placeholder="Create a new password">
-                <span class="material-symbols-outlined self-center mr-2 stroke-slate-300">
+
+                <span class=" hidden  material-symbols-outlined  stroke-slate-300 cursor-pointer mr-4 pt-2"
+                  id="showPassword">
                   visibility
                 </span>
 
-                <span class=" hidden material-symbols-outlined icon-hide-password  right-2">
+                <span class=" material-symbols-outlined icon-hide-password cursor-pointer right-4" id="hidePassword">
                   visibility_off
                 </span>
               </div>
@@ -80,7 +82,7 @@
             </p>
             <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] hidden "> Please enter your password
             </p>
-            <p class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px]  "> Incorrect password
+            <p class=" hidden text-[10px] pt-1 text-red-500 md:text-right md:text-[12px]  "> Incorrect password
             </p>
           </div>
         </div>
@@ -101,7 +103,7 @@
 
 
           <div class="w-full pb-10">
-            <a href="getting-started.html" class="onbordingbutton w-full text-center block "> Login</a>
+            <a href="forgot-password.html" class="onbordingbutton w-full text-center block "> Login</a>
           </div>
 
 
@@ -157,6 +159,8 @@
         </div>
       </div>
   </section>
+
+  <script src="../scripts/script.js"></script>
 </body>
 
 </html>

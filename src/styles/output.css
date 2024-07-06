@@ -1147,6 +1147,10 @@ video {
   padding-top: 2rem;
 }
 
+.pt-5{
+  padding-top: 1.25rem;
+}
+
 .text-left{
   text-align: left;
 }
@@ -1597,6 +1601,10 @@ video {
   .vsm\:gap-2{
     gap: 0.5rem;
   }
+
+  .vsm\:pt-5{
+    padding-top: 1.25rem;
+  }
 }
 
 @media (min-width: 480px){
@@ -1606,6 +1614,10 @@ video {
 
   .sm\:hidden{
     display: none;
+  }
+
+  .sm\:pt-5{
+    padding-top: 1.25rem;
   }
 }
 

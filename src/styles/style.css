@@ -26,7 +26,7 @@
 }
 
 .logo {
-  @apply w-40;
+  @apply w-24;
 }
 
 .input {

@@ -6,8 +6,9 @@ const mobileMenu = document.getElementById("mobile-menu");
 const closeMenu = document.getElementById("close-menu");
 const passwordInput = document.getElementById("passwordInput");
 const redBorder = document.getElementById("borderRed");
-const emailInput = document.querySelector("emailInput");
-const emptyEmail = document.querySelector("emptyEmail");
+const emailInput = document.getElementById("emailInput");
+const emptyEmail = document.getElementById("emptyEmail");
+const emptyPassword = document.getElementById("emptyPassword");
 const invalidEmail = document.getElementById("invalidEmail");
 const authenticationBtn = document.getElementById("authenticationBtn");
 const togglePassword = document.getElementById("togglePassword");
@@ -67,23 +68,21 @@ if (togglePassword) {
 }
 
 if (emailInput && passwordInput) {
-  authenticationBtn.addEventListener("click", function () {
-    if (emailInput.value === "" || passwordInput.value === "") {
-      redBorder.classList.remove("hidden");
+  authenticationBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (emailInput.value.length === 0 || passwordInput.value.length === 0) {
       emptyEmail.classList.remove("hidden");
-    } else {
-      redBorder.classList.add("hidden");
-      emptyEmail.classList.add("hidden");
+      emptyPassword.classList.remove("hidden");
     }
   });
 }
 
-if (emailInput) {
-  const emailValidation = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{6,}$/;
-
+if (emailInput && invalidEmail) {
+  const emailValidation = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   emailInput.addEventListener("input", function () {
     if (!emailValidation.test(emailInput.value)) {
       invalidEmail.classList.remove("hidden");
+      emptyEmail.classList.add("hidden");
     } else {
       invalidEmail.classList.add("hidden");
     }
@@ -91,11 +90,12 @@ if (emailInput) {
 }
 
 if (passwordInput) {
-  const passValidation = /^(?=.*\d)(?=.*[a-z]).{6,}$/;
+  const passValidation = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
   passwordInput.addEventListener("input", function () {
     if (!passValidation.test(passwordInput.value)) {
       passwordLength.classList.remove("hidden");
+      emptyPassword.classList.add("hidden");
     } else {
       passwordLength.classList.add("hidden");
     }

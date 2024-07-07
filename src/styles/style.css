@@ -25,6 +25,10 @@
   z-index: -1;
 }
 
+.logo {
+  @apply w-40;
+}
+
 .input {
   @apply block w-full rounded-md border-0 py-1.5 text-gray-900 
   placeholder:text-gray-300 font-normal outline-none pl-1 mr-1 md:text-left placeholder:text-[15px] placeholder:font-normal;

@@ -725,6 +725,34 @@ video {
   height: 100vh;
 }
 
+.h-\[20px\]{
+  height: 20px;
+}
+
+.h-\[10px\]{
+  height: 10px;
+}
+
+.h-\[1px\]{
+  height: 1px;
+}
+
+.h-\[15px\]{
+  height: 15px;
+}
+
+.h-\[12px\]{
+  height: 12px;
+}
+
+.h-\[13px\]{
+  height: 13px;
+}
+
+.h-\[14px\]{
+  height: 14px;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -805,8 +833,38 @@ video {
   width: 100vw;
 }
 
+.w-\[20px\]{
+  width: 20px;
+}
+
+.w-\[10px\]{
+  width: 10px;
+}
+
+.w-\[15px\]{
+  width: 15px;
+}
+
+.w-\[12px\]{
+  width: 12px;
+}
+
+.w-\[13px\]{
+  width: 13px;
+}
+
+.w-\[14px\]{
+  width: 14px;
+}
+
 .cursor-pointer{
   cursor: pointer;
+}
+
+.appearance-none{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .flex-row{
@@ -1027,8 +1085,20 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-inherit{
+  background-color: inherit;
+}
+
 .stroke-slate-300{
   stroke: #cbd5e1;
+}
+
+.stroke-Gray400{
+  stroke: #999999;
+}
+
+.stroke-Gray100{
+  stroke: #EDEDED;
 }
 
 .p-2{
@@ -1332,6 +1402,11 @@ video {
   --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
 }
 
+.ring-gray-500{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(107 114 128 / var(--tw-ring-opacity));
+}
+
 .ring-opacity-5{
   --tw-ring-opacity: 0.05;
 }
@@ -1616,6 +1691,31 @@ video {
 .placeholder\:text-Gray200::placeholder{
   --tw-text-opacity: 1;
   color: rgb(217 217 217 / var(--tw-text-opacity));
+}
+
+.default\:ring-2:default{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.checked\:border-transparent:checked{
+  border-color: transparent;
+}
+
+.checked\:border-Gray500:checked{
+  --tw-border-opacity: 1;
+  border-color: rgb(115 115 115 / var(--tw-border-opacity));
+}
+
+.checked\:bg-gray-900:checked{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.checked\:bg-blue-500:checked{
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-100:hover{

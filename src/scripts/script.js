@@ -58,7 +58,6 @@ if (togglePassword) {
       passwordInput.type = "text";
       showIcon.classList.add("hidden");
       hideIcon.classList.remove("hidden");
-      passwordInstruction.classList.remove("hidden");
     } else {
       passwordInput.type = "password";
       hideIcon.classList.add("hidden");
@@ -67,16 +66,33 @@ if (togglePassword) {
   });
 }
 
-if (emailInput && passwordInput) {
+if (emailInput && passwordInput && authenticationBtn) {
   authenticationBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    if (emailInput.value.length === 0 || passwordInput.value.length === 0) {
+
+    let hasError = false;
+
+    if (emailInput.value.length === 0) {
       emptyEmail.classList.remove("hidden");
+      invalidEmail.classList.add("hidden");
+      hasError = true;
+    } else {
+      emptyEmail.classList.add("hidden");
+    }
+
+    if (passwordInput.value.length === 0) {
       emptyPassword.classList.remove("hidden");
+      passwordLength.classList.add("hidden");
+      hasError = true;
+    } else {
+      emptyPassword.classList.add("hidden");
+    }
+
+    if (hasError) {
+      e.preventDefault();
     }
   });
 }
-
 if (emailInput && invalidEmail) {
   const emailValidation = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   emailInput.addEventListener("input", function () {
@@ -92,12 +108,17 @@ if (emailInput && invalidEmail) {
 if (passwordInput) {
   const passValidation = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
-  passwordInput.addEventListener("input", function () {
+  passwordInput.addEventListener("keydown", function () {
+    // passwordInstruction.classList.add("hidden");
+
     if (!passValidation.test(passwordInput.value)) {
       passwordLength.classList.remove("hidden");
       emptyPassword.classList.add("hidden");
+      passwordInstruction.classList.add("hidden");
+      // emptyPassword.classList.remove("hidden");
     } else {
       passwordLength.classList.add("hidden");
+      passwordInstruction.classList.remove("hidden");
     }
   });
 }

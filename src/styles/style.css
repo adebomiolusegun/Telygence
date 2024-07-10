@@ -85,3 +85,11 @@
 .continue-to-Apple {
   @apply w-full ring-1 ring-black bg-black text-white flex items-center justify-start py-2 rounded-3xl;
 }
+
+.continue-with-Btn {
+  @apply flex align-middle flex-col md:hidden gap-4 w-[100%];
+}
+
+.hide {
+  @apply hidden;
+}

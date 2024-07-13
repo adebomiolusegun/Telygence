@@ -4,25 +4,32 @@ const mainMenu = document.getElementById("article");
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const closeMenu = document.getElementById("close-menu");
-const passwordInput = document.getElementById("passwordInput");
 const redBorder = document.getElementById("borderRed");
-const emailInput = document.getElementById("emailInput");
-const emptyEmail = document.getElementById("emptyEmail");
-const emptyPassword = document.getElementById("emptyPassword");
-const invalidEmail = document.getElementById("invalidEmail");
-const authenticationBtn = document.getElementById("authenticationBtn");
-const togglePassword = document.getElementById("togglePassword");
-const showIcon = document.getElementById("showIcon");
-const hideIcon = document.getElementById("hideIcon");
-const passwordLength = document.getElementById("passwordLength");
-const passwordInstruction = document.getAnimations("passwordInstruction");
+const emailInput = document.querySelector(".emailInput");
+const emptyEmail = document.querySelector(".emptyEmail");
+const invalidEmail = document.querySelector(".invalidEmail");
+const passwordInput = document.querySelector(".passwordInput");
+const togglePassword = document.querySelector(".togglePassword");
+const showIcon = document.querySelector(".showIcon");
+const hideIcon = document.querySelector(".hideIcon");
+const passwordInstruction = document.querySelector(".passwordInstruction");
+const passwordLength = document.querySelector(".passwordLength");
+const emptyPassword = document.querySelector(".emptyPassword");
+const authenticationBtn = document.querySelector(".authenticationBtn");
+const hideRadio = document.querySelector(".hideRadio");
+const emailLoginInput = document.getElementById("emailLoginInput");
+const passwordLoginInput = document.getElementById("passwordLoginInput");
+const emailNotFound = document.getElementById("emailNotFound");
+const incorrectPassword = document.getElementById("incorrectPassword");
+const loginVerification = document.getElementById("loginVerification");
 const getStartedIcon = document.getElementById("gettingStartedDropdownIcon");
 const getStartedDropdown = document.getElementById("gettingStartedDropdown");
 const menuItem = document.querySelectorAll(".menu-item");
 const gettingStartedInput = document.getElementById("gettingStartedInput");
 
 if (menuBtn) {
-  menuBtn.addEventListener("click", function () {
+  menuBtn.addEventListener("click", function (e) {
+    e.preventDefault();
     mobileMenu.classList.remove("hidden");
     mainMenu.classList.add("hidden");
     menuBtn.classList.add("hidden");
@@ -109,16 +116,42 @@ if (passwordInput) {
   const passValidation = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
   passwordInput.addEventListener("keydown", function () {
-    // passwordInstruction.classList.add("hidden");
-
     if (!passValidation.test(passwordInput.value)) {
       passwordLength.classList.remove("hidden");
       emptyPassword.classList.add("hidden");
-      passwordInstruction.classList.add("hidden");
-      // emptyPassword.classList.remove("hidden");
+      // passwordInstruction.classList.add("hidden");
     } else {
       passwordLength.classList.add("hidden");
-      passwordInstruction.classList.remove("hidden");
+      // passwordInstruction.classList.remove("hidden");
+    }
+  });
+}
+
+if (hideRadio) {
+  hideRadio.addEventListener("click", function () {
+    if (hideRadio.classList.contains("bg-white")) {
+      hideRadio.classList.remove("bg-white");
+      hideRadio.classList.add("bg-blue-600");
+    } else {
+      hideRadio.classList.remove("bg-blue-600");
+      hideRadio.classList.add("bg-white");
+    }
+  });
+}
+
+if (emailLoginInput && passwordLoginInput && loginVerification) {
+  loginVerification.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (emailLoginInput.value.length === "onyekamgbikeh@yahoo.com") {
+      emailNotFound.classList.add("hidden");
+    } else {
+      emailNotFound.classList.remove("hidden");
+    }
+
+    if (passwordLoginInput.value.length === `Ade.${Number(2021)}`) {
+      incorrectPassword.classList.add("hidden");
+    } else {
+      incorrectPassword.classList.remove("hidden");
     }
   });
 }

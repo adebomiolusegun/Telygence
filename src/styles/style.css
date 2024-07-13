@@ -35,7 +35,7 @@
 }
 
 .inputdiv {
-  @apply flex-1 flex flex-row align-middle rounded-xl ring-1 ring-slate-300 justify-evenly bg-white py-1;
+  @apply flex-1 flex flex-row align-middle rounded-xl ring-1 ring-slate-300 justify-evenly bg-white py-1 px-[10px];
 }
 
 .verificationinput {
@@ -92,4 +92,8 @@
 
 .hide {
   @apply hidden;
+}
+
+.Authentication-icons {
+  @apply self-center;
 }

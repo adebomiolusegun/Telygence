@@ -12,7 +12,6 @@ const passwordInput = document.querySelector(".passwordInput");
 const togglePassword = document.querySelector(".togglePassword");
 const showIcon = document.querySelector(".showIcon");
 const hideIcon = document.querySelector(".hideIcon");
-const passwordInstruction = document.querySelector(".passwordInstruction");
 const passwordLength = document.querySelector(".passwordLength");
 const emptyPassword = document.querySelector(".emptyPassword");
 const authenticationBtn = document.querySelector(".authenticationBtn");
@@ -101,7 +100,7 @@ if (emailInput && passwordInput && authenticationBtn) {
   });
 }
 if (emailInput && invalidEmail) {
-  const emailValidation = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const emailValidation = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
   emailInput.addEventListener("input", function () {
     if (!emailValidation.test(emailInput.value)) {
       invalidEmail.classList.remove("hidden");
@@ -113,16 +112,14 @@ if (emailInput && invalidEmail) {
 }
 
 if (passwordInput) {
-  const passValidation = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+  const passValidation = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,}$/;
 
-  passwordInput.addEventListener("keydown", function () {
+  passwordInput.addEventListener("input", function () {
     if (!passValidation.test(passwordInput.value)) {
       passwordLength.classList.remove("hidden");
       emptyPassword.classList.add("hidden");
-      // passwordInstruction.classList.add("hidden");
     } else {
       passwordLength.classList.add("hidden");
-      // passwordInstruction.classList.remove("hidden");
     }
   });
 }
@@ -142,13 +139,13 @@ if (hideRadio) {
 if (emailLoginInput && passwordLoginInput && loginVerification) {
   loginVerification.addEventListener("click", function (e) {
     e.preventDefault();
-    if (emailLoginInput.value.length === "onyekamgbikeh@yahoo.com") {
+    if (emailLoginInput.value === "onyekamgbikeh@yahoo.com") {
       emailNotFound.classList.add("hidden");
     } else {
       emailNotFound.classList.remove("hidden");
     }
 
-    if (passwordLoginInput.value.length === `Ade.${Number(2021)}`) {
+    if (passwordLoginInput.value === `Ade.${Number(2021)}`) {
       incorrectPassword.classList.add("hidden");
     } else {
       incorrectPassword.classList.remove("hidden");

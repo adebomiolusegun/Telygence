@@ -25,6 +25,12 @@
   z-index: -1;
 }
 
+:root {
+  --borderGradiantOne: #9983e3;
+  --borderGradiantTwo: #28c7fa;
+  --borderGradiantThree: #801827;
+}
+
 .logo {
   @apply w-24;
 }
@@ -36,6 +42,10 @@
 
 .inputdiv {
   @apply flex-1 flex flex-row align-middle rounded-xl ring-1 ring-slate-300 justify-evenly bg-white py-1 px-[10px];
+}
+
+.reset-password-input {
+  @apply w-full md:w-[135px] font-[400] text-[12px] self-center;
 }
 
 .verificationinput {
@@ -55,11 +65,11 @@
 }
 
 .articlebtn {
-  @apply border-Btngradiantone bg-gradient-to-t from-Btngradianttwo via-Logincolortwo to-Btngradianttwo text-white px-9 py-3 rounded-3xl;
+  @apply border-Btngradiantone bg-gradient-to-t from-Btngradianttwo via-Logincolortwo to-Btngradianttwo text-white px-12 py-3 rounded-3xl text-center;
 }
 
 .article-texts {
-  @apply text-center w-3/5 text-[20px] md:text-[40px] md:w-2/4 md:self-start md:text-start;
+  @apply text-center w-[300px] text-[20px] md:text-[30px] md:w-[400px] md:self-start md:text-start;
 }
 
 .dropdown-li-bg {
@@ -96,4 +106,11 @@
 
 .Authentication-icons {
   @apply self-center;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #000000, #5943a3, #14637d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

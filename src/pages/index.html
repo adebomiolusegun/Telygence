@@ -9,94 +9,548 @@
 </head>
 
 <body>
-  <main class="">
-    <!-- header  -->
-    <header class="h-screen mobile-bg md:bg overflow-x-hidden">
-      <nav class="relative  mx-auto p-6">
 
-        <!--flex container-->
-        <div class="flex items-center justify-between">
-          <!---->
-          <div>
-            <img src="../assets/images/logo.png" alt="" class="logo">
-          </div>
-          <!--menu items-->
-          <div class="hidden md:flex space-x-10 justify-center  w-[60%]">
-            <a href="">features</a>
-            <a href="">sync with app</a>
-            <a href="">pricing</a>
-            <a href="">service</a>
-            <a href="">support</a>
-          </div>
-          <!--button-->
-          <div>
-            <button class=" hidden md:flex get-extension-btn">Get
-              Extension</button>
-          </div>
-          <svg class="w-12 flex md:hidden" id="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-          </svg>
+  <header class="mobile-bg md:bg">
+    <!--nav bar-->
+    <nav class="relative container mx-auto p-6">
+      <div class=" flex items-center justify-between ">
+        <!--logo-->
+        <div class="w-32">
+          <img src="../assets/images/logo.png" alt="">
+        </div>
 
-          <svg class=" hidden md:hidden w-8" id="close-menu" xmlns="http://www.w3.org/2000/svg" fill="none"
-            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-          </svg>
+        <div class="hidden md:flex space-x-6 text-[18px] font-light">
+          <a href="">Features</a>
+          <a href="">Sync with app</a>
+          <a href="">Extension</a>
+          <a href="">Support</a>
+        </div>
+
+        <div class="hidden md:flex space-x-2 items-center">
+          <a href="" class="text-[18px] font-light">Login</a>
+          <a href=""
+            class="p-3 px-6 pt-2 text-center rounded-full text-white text-[13px] bg-gradient-to-t from-landbtnGradiantTwo to-landbtnGradiantOne">Get
+            Started Free</a>
+        </div>
+
+      </div>
+    </nav>
+
+    <!--first section-->
+    <section class="">
+      <div class="md:container flex flex-col  items-center px-6 mx-auto space-y-0 md:flex-row  md:space-y-0">
+        <!--right item-->
+        <div class="flex flex-col  space-y-12 md:w-1/2">
+          <a href="" class="text-[10px] text-center font-light p-3 px-2 pt-2 rounded-full"
+            style="border: 3px solid; border-image: linear-gradient(to right, var(--borderGradiantOne), var(--borderGradiantTwo), var(--borderGradiantThree)) 1;">
+            TRY NOW - IT’S REALLY FREE!
+          </a>
+
+          <h1 class="text-[21px] md:text-[56px] text-center md:text-left font-semibold">
+            <span class="text-Btngradianttwo">Boost </span>your productivity with Telygence <span
+              class="text-borderGradiantTwo">AI</span>
+          </h1>
+
+          <P class="text-[12px] md:text-[21px] text-center md:text-left font-light">
+            Tired of typing the same messages over and over? Telygence AI says buh-bye to repetitive typing. Just one
+            click and you're done!
+          </P>
+
+          <div class="flex items-center justify-center md:justify-start  md:space-x-6">
+            <a href=""
+              class=" py-4 px-16  text-center rounded-full text-white text-[10px] bg-gradient-to-t from-landbtnGradiantTwo to-landbtnGradiantOne ">Get
+              Started Free</a>
+
+            <a href=""
+              class="hidden md:flex p-3 py-4 px-16 text-center rounded-full text-[10px] bg-white text-Btngradianttwo ring-2 ring-Btngradianttwo">Add
+              to
+              Chrome</a>
+          </div>
+        </div>
+
+        <!--left item the image-->
+        <div class="md:w-1/2  flex  pb-14 pt-10 md:justify-end ">
+          <img src=" ../assets/images/hero-gif.png" alt="" class="">
+        </div>
+
+      </div>
+    </section>
+  </header>
+
+  <div class=" h-20 bg-Btngradiantone">
+
+  </div>
+
+  <!--second section-->
+  <section class=" space-y-20 md:space-y-40">
+    <div class="px-6 flex flex-col space-y-6 items-center md:flex-row md:space-y-0 pt-20 md:container mx-auto">
+      <!--item left-->
+      <div class="space-y-3 w-80  md:w-[50%]">
+        <div class=" md:w-[80%]">
+          <h1 class="text-gradient max-w-md text-[18px] md:text-[26px] font-semibold ">
+            Instant responses
+          </h1>
+          <p class=" text-[16px] md:text-[17px] font-light">Respond to emails, Slack pings, LinkedIn DMs, or WhatsApp
+            messages instantly with no AI
+            prompt needed.</p>
 
         </div>
-        <!--mobile menu-->
+        <div>
+          <img src="../assets/images/cotainerleftImg.png" alt="" class="hidden md:flex">
+        </div>
+      </div>
 
-        <div class=" absolute hidden md:hidden h-screen" id="mobile-menu">
-          <div class=" pt-10 absolute w-full items-start flex flex-col space-y-10 bg-black justify-start ">
-            <a href="" class="dropdown-li-bg">features</a>
-            <a href="" class="dropdown-li-bg">sync with app</a>
-            <a href="" class="dropdown-li-bg">pricing</a>
-            <a href="" class="dropdown-li-bg">service</a>
-            <a href="" class="dropdown-li-bg">support</a>
+      <!--item left-->
+      <div class="md:w-[50%]flex md:justify-end">
+        <img src="../assets/images/convoImageMobile.png " alt="" class="flex md:hidden">
+        <img src="../assets/images/convoImageDesk.png" alt="" class="hidden md:flex">
+      </div>
+    </div>
 
-            <div class=" button text-center w-44">
-              <a href="">Get Extension</a>
+    <!--second container-->
+
+    <div class="px-6 flex flex-col space-y-6 items-center md:flex-row md:space-y-0 md:container mx-auto">
+      <!--item left-->
+      <div class="md:w-[50%]">
+        <img src="../assets/images/convoImage2.png " alt="" class="hidden md:flex">
+      </div>
+
+      <!--right-->
+      <div class="space-y-3 w-80  md:w-[50%]">
+        <div class="md:ml-auto md:w-[80%]">
+          <h1 class="text-gradient max-w-md text-[18px] md:text-[26px] font-semibold ">
+            Seamless drafting
+          </h1>
+          <p class="text-[16px] md:text-[17px] font-light">Start your draft anywhere—email, social media, or customer
+            chat tools—and let our AI complete it.</p>
+        </div>
+
+        <div class="flex md:justify-end">
+          <img src="../assets/images/convoImg2.png" alt="" class="hidden md:flex">
+          <img src="../assets/images/convo2mobile.png" alt="" class="flex md:hidden">
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--third container-->
+
+    <div class="px-6 flex flex-col space-y-6 items-center md:flex-row md:space-y-0 md:container mx-auto">
+      <!--item left-->
+      <div class="space-y-3 w-80  md:w-[50%]">
+        <div class=" md:w-[80%]">
+          <h1 class="text-gradient max-w-md text-[18px] md:text-[26px] font-semibold ">
+            Smart suggestions
+          </h1>
+          <p class=" text-[16px] md:text-[17px] font-light">Get the right message suggestion at the right time, tailored
+            to your needs.</p>
+
+        </div>
+        <div>
+          <img src="../assets/images/socialsMedia3.png" alt="" class="hidden md:flex">
+        </div>
+      </div>
+
+      <!--item left-->
+      <div class="md:w-[50%]flex md:justify-end">
+        <img src="../assets/images/convo3mobile.png" alt="" class="flex md:hidden">
+        <img src="../assets/images/convo3.png" alt="" class="hidden md:flex">
+      </div>
+    </div>
+
+
+    <!--forth container-->
+
+    <div class="px-6 flex flex-col space-y-6 items-center md:flex-row md:space-y-0 md:container mx-auto">
+      <!--item left-->
+      <div class="md:w-[50%]">
+        <img src="../assets/images/image4left.png" alt="" class="hidden md:flex">
+      </div>
+
+      <!--right-->
+      <div class="space-y-3 w-80  md:w-[50%]">
+        <div class="md:ml-auto md:w-[80%]">
+          <h1 class="text-gradient max-w-md text-[18px] md:text-[26px] font-semibold ">
+            Personalized writing styles
+          </h1>
+          <p class="text-[16px] md:text-[17px] font-light">Choose a writing style that matches your personality for more
+            authentic communication.</p>
+        </div>
+
+        <div class="flex md:justify-end">
+          <img src="../assets/images/image4right.png" alt="" class="hidden md:flex">
+          <img src="../assets/images/image4mobile.png" alt="" class="flex md:hidden">
+        </div>
+      </div>
+
+    </div>
+
+    <!--fifth container-->
+    <div class="px-6 flex flex-col space-y-6 items-center md:flex-row md:space-y-0 md:container mx-auto pb-20">
+      <!--item left-->
+      <div class="space-y-3 w-80  md:w-[50%]">
+        <div class=" md:w-[80%]">
+          <h1 class="text-gradient max-w-md text-[18px] md:text-[26px] font-semibold ">
+            Set, track, and achieve with ease
+          </h1>
+          <p class=" text-[16px]  font-light">Break down your projects into manageable tasks and assign
+            deadlines to keep your workflow streamlined.</p>
+
+        </div>
+        <div>
+          <img src="../assets/images/image5left.png" alt="" class="hidden md:flex">
+        </div>
+      </div>
+
+      <!--item left-->
+      <div class="md:w-[50%]flex md:justify-end">
+        <img src="../assets/images/image5mobile.png" alt="" class="flex md:hidden">
+        <img src="../assets/images/image5right.png" alt="" class="hidden md:flex">
+      </div>
+    </div>
+  </section>
+
+  <!--third section-->
+  <section class="bg-sectionGradiantOne">
+
+    <div class="flex justify-between">
+      <div class="h-[18px] w-[123px] bg-[#FF304F]"></div>
+      <div class="h-[18px] w-[123px] bg-[#28C7FA]"></div>
+    </div>
+
+    <!--headings-->
+    <div class="flex flex-col text-center items-center text-white space-y-6">
+      <h1 class="text-[18px]">Revolutionalize the way you work</h1>
+      <p class="font-light text-[16px] md:text-[15px]">Your smart tool for making work easier and more enjoyable—perfect
+        for
+        professionals.</p>
+    </div>
+
+    <div
+      class="px-6 flex flex-col space-y-20 md:space-x-6 items-center md:flex-row md:space-y-0 pt-20 md:container mx-auto">
+
+      <!--first container-->
+      <div class="space-y-10 md:w-[33%]">
+        <!--first container headings-->
+        <div class=" text-white space-y-6 ">
+          <h1 class="max-w-md text-[17px] md:text-[18px] font-semibold ">
+            Hiring Managers
+          </h1>
+          <p class=" w-[90%] text-[15px] font-light">Send responses to job proposals with ease</p>
+        </div>
+
+
+        <!--first containter image-->
+        <div>
+          <img src="../assets/images/image1section3.png" alt="">
+          <img src="../assets/images/image1section3mobile.png" alt="" class="flex md:hidden">
+        </div>
+
+
+      </div>
+
+      <!--second container-->
+      <div class="space-y-10  md:w-[33%]">
+        <!--second container headings-->
+        <div class=" text-white space-y-6 ">
+          <h1 class="max-w-md text-[17px] md:text-[18px] font-semibold ">
+            Project Managers
+          </h1>
+          <p class=" max-w-sm text-[15px] font-light">Stay on top of tasks and milestones with seamless task management
+          </p>
+        </div>
+
+
+        <!--second containter image-->
+        <div>
+          <img src="../assets/images/image2section3.png" alt="">
+          <img src="../assets/images/image2section3mobile.png" alt="" class="flex md:hidden">
+        </div>
+
+
+      </div>
+
+      <!--third section-->
+      <div class="space-y-10  md:w-[33%]">
+        <!--third section headings-->
+        <div class=" text-white space-y-6 ">
+          <h1 class="max-w-md text-[17px] md:text-[18px] font-semibold ">
+            Sales Professionals
+          </h1>
+          <p class=" max-w-sm text-[15px] font-light">Craft perfect sales outreach emails and follow-ups effortlessly
+          </p>
+        </div>
+
+        <!--third containter image-->
+        <div>
+          <img src="../assets/images/image3section3.png" alt="">
+          <img src="../assets/images/image3section3mobile.png" alt="" class="flex md:hidden">
+        </div>
+
+
+      </div>
+
+      <!--fourth container-->
+      <div class="space-y-10 md:w-[33%]">
+        <!--fourth container headings-->
+        <div class=" text-white space-y-6 ">
+          <h1 class="max-w-md text-[17px] md:text-[18px] font-semibold ">
+            Customer Support Agents
+          </h1>
+          <p class=" w-[85%] text-[15px] font-light">Respond to customer inquiries swiftly and accurately</p>
+        </div>
+
+
+        <!--fourth containter image-->
+        <div>
+          <img src="../assets/images/image4section3.png" alt="">
+          <img src="../assets/images/image4section3mobile.png" alt="" class="flex md:hidden">
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <!--section five-->
+  <section>
+    <div class="hidden md:flex container items-center mx-auto space-x-6 px-6">
+      <div class="w-[33%]">
+        <img src="../assets/images/image1section3mobile.png" alt="">
+      </div>
+      <div class="w-[33%]">
+        <img src="../assets/images/image2section3mobile.png" alt="">
+      </div>
+      <div class="w-[33%]">
+        <img src="../assets/images/image3section3mobile.png" alt="">
+      </div>
+
+      <div class="w-[33%]">
+        <img src="../assets/images/image4section3mobile.png" alt="" class="">
+      </div>
+    </div>
+  </section>
+
+  <!--Faq Section-->
+  <section class="">
+
+
+
+    <div class="px-6 flex flex-col space-y-5 items-center py-20 md:container mx-auto">
+      <div>
+        <h1 class="font-semibold text-[26px] pb-16">Frequently asked questions</h1>
+      </div>
+      <!--dropdown section first container-->
+      <div class="space-y-5 w-full">
+        <div
+          class=" ring-1 ring-black w-full px-4 md:px-10 h-16 rounded-xl flex items-center justify-between md:w-full">
+          <h4 class=" font-light w-[90%]">Q1: What platforms does Telygence support?</h4>
+
+          <a href=""><img src="../assets/images/dropdownFaq.png" alt="" class="faqDropdown"></a>
+        </div>
+
+        <div class="faqAnswer bg-white px-4 md:px-10 hidden">
+          <p class="w-full md:w-[90%] font-light">A1: Telygence seamlessly integrates with popular
+            communication platforms
+            including
+            email,
+            Slack, LinkedIn,
+            and WhatsApp, allowing you to manage all your messages in one place.</p>
+        </div>
+      </div>
+
+      <!--dropdown section second container-->
+      <div class="space-y-5 w-full">
+        <div
+          class=" ring-1 ring-black w-full px-4 md:px-10 h-16 rounded-xl flex items-center justify-between md:w-full">
+          <h4 class=" font-light w-[90%]">Q1: What platforms does Telygence support?</h4>
+
+          <a href=""><img src="../assets/images/dropdownFaq.png" alt="" class="faqDropdown"></a>
+        </div>
+
+        <div class="faqAnswer bg-white px-4 md:px-10 hidden">
+          <p class="w-full md:w-[90%] font-light">A1: Telygence seamlessly integrates with popular
+            communication platforms
+            including
+            email,
+            Slack, LinkedIn,
+            and WhatsApp, allowing you to manage all your messages in one place.</p>
+        </div>
+      </div>
+
+
+      <div class="space-y-5 w-full">
+        <div
+          class=" ring-1 ring-black w-full px-4 md:px-10 h-16 rounded-xl flex items-center justify-between md:w-full">
+          <h4 class=" font-light w-[90%]">Q1: What platforms does Telygence support?</h4>
+
+          <a href=""><img src="../assets/images/dropdownFaq.png" alt="" class="faqDropdown"></a>
+        </div>
+
+        <div class="faqAnswer bg-white px-4 md:px-10 hidden">
+          <p class="w-full md:w-[90%] font-light">A1: Telygence seamlessly integrates with popular
+            communication platforms
+            including
+            email,
+            Slack, LinkedIn,
+            and WhatsApp, allowing you to manage all your messages in one place.</p>
+        </div>
+      </div>
+
+      <div class="space-y-5 w-full">
+        <div
+          class=" ring-1 ring-black w-full px-4 md:px-10 h-16 rounded-xl flex items-center justify-between md:w-full">
+          <h4 class=" font-light w-[90%]">Q1: What platforms does Telygence support?</h4>
+
+          <a href=""><img src="../assets/images/dropdownFaq.png" alt="" class="faqDropdown"></a>
+        </div>
+
+        <div class="faqAnswer bg-white px-4 md:px-10 hidden">
+          <p class="w-full md:w-[90%] font-light">A1: Telygence seamlessly integrates with popular
+            communication platforms
+            including
+            email,
+            Slack, LinkedIn,
+            and WhatsApp, allowing you to manage all your messages in one place.</p>
+        </div>
+      </div>
+      <!--las faq-->
+      <div class="space-y-5 w-full">
+        <div
+          class=" ring-1 ring-black w-full px-4 md:px-10 h-16 rounded-xl flex items-center justify-between md:w-full">
+          <h4 class=" font-light w-[90%]">Q1: What platforms does Telygence support?</h4>
+
+          <a href=""><img src="../assets/images/dropdownFaq.png" alt="" class="faqDropdown"></a>
+        </div>
+
+        <div class="faqAnswer bg-white px-4 md:px-10 hidden">
+          <p class="w-full md:w-[90%] font-light">A1: Telygence seamlessly integrates with popular
+            communication platforms
+            including
+            email,
+            Slack, LinkedIn,
+            and WhatsApp, allowing you to manage all your messages in one place.</p>
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <section class="bg-[#002651]">
+    <div
+      class="md:container flex flex-col text-white items-center px-6  mx-auto space-y-0 md:flex-row md:space-y-0 relative">
+
+      <!--headings-->
+      <div class="space-y-20 text-center md:text-left absolute z-10 px-6 py-36 md:py-0 md:px-0 md:pt-0 md:w-1/2">
+        <h1 class=" mx-w-md text-[28px] md:text-[46px]">Transform your work efficiency with
+          Telygence AI</h1>
+
+        <p class="hidden md:flex text-[19px] font-light">Effortlessly draft emails, respond to messages, and manage your
+          tasks—all
+          with the
+          power of AI. Enhance
+          productivity and achieve more, with no prompts needed.</p>
+
+        <p class="flex md:hidden text-[19px] font-light">Tired of typing the same messages over and over? Telygence AI
+          says buh-bye
+          to
+          repetitive typing. Just one click and you're done!</p>
+
+        <button type="submit" class="ring-2 ring-white px-20 py-4 rounded-full">Get Started Free</button>
+      </div>
+
+
+      <div class="md:w-1/2 relative items-center justify-center flex ml-auto ">
+        <div class="absolute">
+          <img src="../assets/images/girlImagesection6.png" alt=" w-[400px] h-[500px] " class="hidden md:flex">
+        </div>
+
+        <div class=" flex space-x-3 self-end">
+          <div class="w-10 h-[45rem] bg-[#28C7FA] opacity-30 md:opacity-100"></div>
+          <div class="w-10 h-[45rem] bg-[#FF304F] opacity-30 md:opacity-100"></div>
+          <div class="w-10 h-[45rem] bg-[#775ADA] opacity-30 md:opacity-100"></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--footer section-->
+  <section>
+    <div
+      class="md:container flex flex-col  justify-center px-6  mx-auto py-20 space-y-20 md:flex-row md:space-y-0 relative">
+
+      <div class="flex-1">
+        <img src="../assets/images/logo.png" alt="" class="w-40">
+      </div>
+
+      <!--headings-->
+
+      <div class=" w-[80%] flex md:items-center md:justify-center">
+        <div class="space-y-10 flex flex-col justify-center md:space-x-20  md:space-y-0 md:flex-row">
+
+          <div>
+            <div class="pb-6 font-semibold">
+              <h3 class="text-[15px]">Get Extension</h3>
+            </div>
+
+            <div class="space-y-3 font-light">
+              <p>Telygence for Edge</p>
+              <p>Telygence for Firefox</p>
+              <p>Telygence for Chrome</p>
+              <p>Telygence for Safari</p>
             </div>
           </div>
 
+          <div>
+            <div class="pb-6 font-semibold">
+              <h3 class="text-[15px]">Company</h3>
+            </div>
 
-        </div>
-
-      </nav>
-
-      <article class="  mx-auto p-6 items-center flex flex-col space-y-12 md:items-start" id="article">
-        <div>
-          <img src="../assets/images/trynow.png" alt="">
-        </div>
-
-        <!--Article write up-->
-        <div class="article-texts ">
-          <h3><span class="text-Btngradianttwo">Boost</span> your productivity with Telygence <span
-              class="text-blue400">AI</span></h3>
-        </div>
-
-        <div class="w-60 text-center md:text-start md:w-[520px]">
-          <p>Tired of typing the same messages over and over? Telygence AI says buh-bye to repetitive typing! Just one
-            click and you're done.</p>
-        </div>
-
-        <div class="flex items-center space-x-5 ">
-          <div class="articlebtn px-9 py-3">
-            <a href="">Get Extension</a>
+            <div class="space-y-3 font-light">
+              <p>Careers</p>
+              <p>About us</p>
+              <p>Blog</p>
+            </div>
           </div>
 
-          <div class="hidden md:flex ring-2 rounded-3xl px-9 py-3 ring-Btngradianttwo">
-            <a href="">Get Extension</a>
+          <div>
+            <div class="pb-6 font-semibold">
+              <h3 class="text-[15px]">Legal</h3>
+            </div>
+
+            <div class="space-y-3 font-light">
+              <p>Privacy policy</p>
+              <p>Terms and Conditions</p>
+              <p>Disclaimer</p>
+            </div>
           </div>
+
+          <div>
+            <div class="pb-6 font-semibold">
+              <h3 class="text-[15px]">Connect with us</h3>
+            </div>
+
+            <div class="space-y-3 font-light">
+              <p>Telygence for Edge <img src="" alt=""></p>
+              <p>Telygence for Edge <img src="" alt=""></p>
+              <p>Telygence for Edge <img src="" alt=""></p>
+              <p>Telygence for Edge <img src="" alt=""></p>
+            </div>
+          </div>
+
         </div>
 
-      </article>
-    </header>
+      </div>
+    </div>
 
-  </main>
-
+  </section>
 
   <script src="../scripts/script.js"></script>
 </body>

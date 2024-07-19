@@ -25,6 +25,11 @@ const getStartedIcon = document.getElementById("gettingStartedDropdownIcon");
 const getStartedDropdown = document.getElementById("gettingStartedDropdown");
 const menuItem = document.querySelectorAll(".menu-item");
 const gettingStartedInput = document.getElementById("gettingStartedInput");
+const resetBtn = document.querySelector(".resetBtn");
+const passwordMatch = document.querySelector(".passwordMatch");
+const passwordConfirm = document.querySelector(".passwordConfirm");
+const faqDropdown = document.querySelector(".faqDropdown");
+const faqAnswer = document.querySelector(".faqAnswer");
 
 if (menuBtn) {
   menuBtn.addEventListener("click", function (e) {
@@ -73,6 +78,11 @@ if (togglePassword) {
 }
 
 if (emailInput && passwordInput && authenticationBtn) {
+  emailInput.addEventListener("input", function () {
+    if (emailInput.value === "") {
+      emptyEmail.classList.add("hidden");
+    }
+  });
   authenticationBtn.addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -81,6 +91,7 @@ if (emailInput && passwordInput && authenticationBtn) {
     if (emailInput.value.length === 0) {
       emptyEmail.classList.remove("hidden");
       invalidEmail.classList.add("hidden");
+
       hasError = true;
     } else {
       emptyEmail.classList.add("hidden");
@@ -99,7 +110,7 @@ if (emailInput && passwordInput && authenticationBtn) {
     }
   });
 }
-if (emailInput && invalidEmail) {
+if (emailInput && invalidEmail && emptyEmail) {
   const emailValidation = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
   emailInput.addEventListener("input", function () {
     if (!emailValidation.test(emailInput.value)) {
@@ -111,7 +122,7 @@ if (emailInput && invalidEmail) {
   });
 }
 
-if (passwordInput) {
+if (passwordInput && emptyPassword) {
   const passValidation = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,}$/;
 
   passwordInput.addEventListener("input", function () {
@@ -137,18 +148,60 @@ if (hideRadio) {
 }
 
 if (emailLoginInput && passwordLoginInput && loginVerification) {
+  emailLoginInput.addEventListener("input", function () {
+    emailNotFound.classList.add("hidden");
+    invalidEmail.classList.add("hidden");
+  });
+
+  passwordLoginInput.addEventListener("input", function () {
+    passwordLength.classList.add("hidden");
+    incorrectPassword.classList.add("hidden");
+  });
   loginVerification.addEventListener("click", function (e) {
     e.preventDefault();
-    if (emailLoginInput.value === "onyekamgbikeh@yahoo.com") {
+    if (emailLoginInput.value === "") {
+      invalidEmail.classList.remove("hidden");
       emailNotFound.classList.add("hidden");
-    } else {
+    } else if (emailLoginInput.value !== "onyekamgbikeh@yahoo.com") {
       emailNotFound.classList.remove("hidden");
+      invalidEmail.classList.add("hidden");
+    } else {
+      emailNotFound.classList.add("hidden");
+      invalidEmail.classList.add("hidden");
     }
 
-    if (passwordLoginInput.value === `Ade.${Number(2021)}`) {
-      incorrectPassword.classList.add("hidden");
-    } else {
+    if (passwordLoginInput.value === "") {
+      passwordLength.classList.remove("hidden");
+    } else if (passwordLoginInput.value !== "Ade.2021") {
       incorrectPassword.classList.remove("hidden");
+      passwordLength.classList.add("hidden");
+    } else {
+      incorrectPassword.classList.add("hidden");
+      passwordLength.classList.add("hidden");
     }
+  });
+}
+
+if (resetBtn) {
+  passwordInput.addEventListener("input", function () {
+    passwordLength.classList.remove("hidden");
+  });
+
+  resetBtn.addEventListener("click", function () {
+    if (passwordInput.value === "") {
+      emptyPassword.classList.remove("hidden");
+    } else if (passwordInput.value !== passwordConfirm.value) {
+      passwordMatch.classList.remove("hidden");
+      passwordLength.classList.add("hidden");
+    } else {
+      passwordMatch.classList.add("hidden");
+    }
+  });
+}
+
+if (faqAnswer && faqDropdown) {
+  faqDropdown.addEventListener("click", function (e) {
+    e.preventDefault();
+    faqAnswer.classList.toggle("hidden");
   });
 }

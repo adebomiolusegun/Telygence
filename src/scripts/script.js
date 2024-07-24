@@ -28,8 +28,9 @@ const gettingStartedInput = document.getElementById("gettingStartedInput");
 const resetBtn = document.querySelector(".resetBtn");
 const passwordMatch = document.querySelector(".passwordMatch");
 const passwordConfirm = document.querySelector(".passwordConfirm");
-const faqDropdown = document.querySelector(".faqDropdown");
+const faqDropdown = document.querySelectorAll(".faqDropdown");
 const faqAnswer = document.querySelector(".faqAnswer");
+const faqAnswerAll = document.querySelectorAll(".faqAnswer");
 
 if (menuBtn) {
   menuBtn.addEventListener("click", function (e) {
@@ -199,9 +200,21 @@ if (resetBtn) {
   });
 }
 
-if (faqAnswer && faqDropdown) {
-  faqDropdown.addEventListener("click", function (e) {
-    e.preventDefault();
-    faqAnswer.classList.toggle("hidden");
-  });
+if (faqDropdown) {
+  for (let i = 0; i < faqDropdown.length; i++) {
+    faqDropdown[i].addEventListener("click", function (e) {
+      e.preventDefault();
+
+      let faqAnswer = this.parentElement.nextElementSibling;
+
+      if (faqAnswer.classList.contains("hidden")) {
+        for (let a = 0; a < faqAnswerAll.length; a++) {
+          faqAnswerAll[a].classList.add("hidden");
+        }
+        faqAnswer.classList.remove("hidden");
+      } else {
+        faqAnswer.classList.add("hidden");
+      }
+    });
+  }
 }

@@ -114,3 +114,31 @@
   background-clip: text;
   color: transparent;
 }
+
+.section2-img-container {
+  @apply md:w-[50%] flex justify-center md:justify-end;
+}
+
+.section3-img-container {
+  @apply flex flex-col md:flex-row justify-center;
+}
+
+.footer-social-media {
+  @apply flex items-center space-x-3;
+}
+
+.section3-heading-container {
+  @apply md:pl-3 text-white space-y-6;
+}
+
+.faq-Question-div {
+  @apply ring-1 ring-black w-full px-4 md:px-10 h-16 rounded-xl flex items-center justify-between md:w-full;
+}
+
+.faq-Answer-p {
+  @apply w-full md:w-[90%] font-light py-10;
+}
+/* 
+.faq-Answer-div {
+  @apply bg-white px-4 md:px-10 hidden drop-shadow-md;
+} */

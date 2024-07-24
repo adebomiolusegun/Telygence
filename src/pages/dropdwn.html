@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Toggle Example</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="space-y-3 w-full">
+    <div
+      class="ring-1 ring-black w-full px-4 md:px-10 h-16 rounded-xl flex items-center justify-between md:w-full faq-question">
+      <h4 class="font-light w-[90%]">Q1: What platforms does Telygence support?</h4>
+      <a href="#" class="faq-dropdown"><img src="../assets/images/dropdownFaq.png" alt=""></a>
+    </div>
+    <div class="faq-answer bg-white px-4 md:px-10 hidden">
+      <p class="w-full md:w-[90%] font-light">A1: Telygence seamlessly integrates with popular communication platforms
+        including email, Slack, LinkedIn, and WhatsApp, allowing you to manage all your messages in one place.</p>
+    </div>
+  </div>
+
+  <div class="space-y-3 w-full">
+    <div
+      class="ring-1 ring-black w-full px-4 md:px-10 h-16 rounded-xl flex items-center justify-between md:w-full faq-question">
+      <h4 class="font-light w-[90%]">Q2: How do I create an account?</h4>
+      <a href="#" class="faq-dropdown"><img src="../assets/images/dropdownFaq.png" alt=""></a>
+    </div>
+    <div class="faq-answer bg-white px-4 md:px-10 hidden">
+      <p class="w-full md:w-[90%] font-light">A2: You can create an account by clicking on the sign-up button on the
+        homepage and filling in the required information.</p>
+    </div>
+  </div>
+
+  <!-- Add more FAQ items here as needed -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let faqDropdowns = document.getElementsByClassName("faq-dropdown");
+
+      if (faqDropdowns) {
+        for (let i = 0; i < faqDropdowns.length; i++) {
+          faqDropdowns[i].addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Close all FAQ answers
+            let allFaqAnswers = document.getElementsByClassName("faq-answer");
+            for (let j = 0; j < allFaqAnswers.length; j++) {
+              allFaqAnswers[j].classList.add("hidden");
+            }
+
+            // Remove active class from all dropdowns
+            for (let k = 0; k < faqDropdowns.length; k++) {
+              faqDropdowns[k].parentElement.nextElementSibling.classList.add("hidden");
+            }
+
+            // Open the clicked FAQ answer
+            let faqAnswer = this.parentElement.nextElementSibling;
+            if (faqAnswer) {
+              faqAnswer.classList.toggle("hidden");
+            }
+          });
+        }
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

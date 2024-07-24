@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../styles/output.css">
+</head>
+
+<body class="bg-[#F9F9F9]">
+  <main class="">
+    <!-- header  -->
+    <header class="h-screen md:h-auto mobile-bg md:bg overflow-x-hidden pb-16">
+      <div class=" px-5 ">
+        <nav class="relative container mx-auto">
+
+          <!--flex container-->
+          <div class="flex items-center justify-between pt-5 pb-10">
+            <!---->
+            <div>
+              <img src="../assets/images/logo.png" alt="" class="logo">
+            </div>
+            <!--menu items-->
+            <div class="hidden md:flex space-x-10 text-[14px] justify-center md:mx-auto">
+              <a href="">features</a>
+              <a href="">sync with app</a>
+              <a href="">service</a>
+              <a href="">support</a>
+
+            </div>
+            <!--button-->
+            <div class="flex items-center justify-between">
+              <a href="#" class="hidden md:flex">Login</a>
+              <button class=" hidden md:flex get-extension-btn">Get
+                Extension</button>
+            </div>
+            <svg class="w-5 flex md:hidden" id="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>
+
+            <svg class=" hidden md:hidden w-5" id="close-menu" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+
+          </div>
+          <!--mobile menu-->
+
+          <div class=" absolute hidden md:hidden h-screen" id="mobile-menu">
+            <div class=" pt-10 absolute w-full items-start flex flex-col space-y-10 bg-black justify-start ">
+              <a href="" class="dropdown-li-bg">features</a>
+              <a href="" class="dropdown-li-bg">sync with app</a>
+              <a href="" class="dropdown-li-bg">service</a>
+              <a href="" class="dropdown-li-bg">support</a>
+
+              <div class=" button text-center w-44">
+                <a href="">Get Extension</a>
+              </div>
+            </div>
+
+
+          </div>
+
+        </nav>
+
+        <div class=" container mx-auto md:flex  items-center justify-between ">
+
+          <article class=" items-center md:items-start flex flex-col space-y-12" id="article">
+            <div>
+              <img src="../assets/images/trynow.png" alt="">
+            </div>
+
+            <!--Article write up-->
+            <div class="article-texts w-[600px] font-normal">
+              <h3><span class="text-Btngradianttwo">Boost</span> your productivity with Telygence <span
+                  class="text-blue400">AI</span></h3>
+            </div>
+
+            <div class=" w-[300px] md:w-[430px] text-[12px] text-center  md:text-start">
+              <p>Tired of typing the same messages over and over? Telygence AI says buh-bye to repetitive typing! Just
+                one
+                click and you're done.</p>
+            </div>
+
+            <div class="flex items-center space-x-5 ">
+
+              <a href="" class="articlebtn">Use app</a>
+
+              <a href="" class=" hidden md:flex ring-2 rounded-3xl px-6 py-2 ring-Btngradianttwo">Get
+                Extension</a>
+
+            </div>
+
+            <div>
+              <p class="w-60 md:w-full text-[10px] text-center md:text-start md:text-[10px] ">By signing up, you’re
+                agreeing
+                to our <a href="" class="text-Btngradianttwo">Terms
+                  and Conditions</a>
+                and <a href="" class="text-Btngradianttwo">Privacy
+                  Policy.</a></p>
+            </div>
+            <article>
+
+              <img src="../assets/images/hero-gif.png" alt="" srcset="" class="flex md:hidden">
+            </article>
+
+          </article>
+
+          <article class="">
+            <img src="../assets/images/hero-gif.png" alt="" srcset="" class="hidden md:flex ">
+          </article>
+
+        </div>
+      </div>
+
+    </header>
+
+    <div class="w-full h-20 bg-Btngradianttwo">
+
+    </div>
+
+
+
+  </main>
+
+
+  <script src="../scripts/script.js"></script>
+</body>
+
+</html>

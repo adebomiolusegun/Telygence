@@ -10,7 +10,7 @@
 
 <body>
 
-  <header class="mobile-bg md:bg">
+  <header class="h-screen md:h-auto mobile-bg md:bg overflow-x-hidden pb-16">
     <!--nav bar-->
     <nav class="relative md:container mx-auto p-6">
       <div class=" flex items-center justify-between ">
@@ -47,8 +47,8 @@
 
       </div>
 
-      <div class=" absolute hidden md:hidden h-screen" id="mobile-menu">
-        <div class=" pt-10 absolute w-full items-start flex flex-col space-y-10 ">
+      <div class="absolute w-full hidden md:hidden h-screen " id="mobile-menu">
+        <div class="absolute pt-10 w-full h-full items-start flex flex-col space-y-10 z-20">
           <a href="" class="dropdown-li-bg">features</a>
           <a href="" class="dropdown-li-bg">sync with app</a>
           <a href="" class="dropdown-li-bg">service</a>
@@ -64,10 +64,11 @@
     <!--first section-->
     <section class="">
       <div
-        class="md:container flex flex-col justify-center items-center px-6 mx-auto space-y-0 md:flex-row  md:space-y-0 py-20">
+        class="md:container flex flex-col justify-center items-center px-6 mx-auto space-y-0 md:flex-row  md:space-y-0 py-20"
+        id="article">
         <!--right item-->
-        <div class="flex flex-col  space-y-12 md:w-1/2">
-          <a href="" class="text-[10px] text-center font-light rounded-full"
+        <div class="flex flex-col space-y-12 md:w-1/2">
+          <a href="" class="text-[10px] text-center font-light rounded-full self-center"
             style="border: 2px solid; padding: 1rem; width: 20rem; border-radius: 100px; border-image: linear-gradient(to right, var(--borderGradiantOne), var(--borderGradiantTwo), var(--borderGradiantThree)) 1;">
             TRY NOW - IT’S REALLY FREE!
           </a>
@@ -238,6 +239,7 @@
     </div>
   </section>
 
+
   <!--third section-->
   <section class="bg-sectionGradiantOne">
 
@@ -247,7 +249,7 @@
     </div>
 
     <!--headings-->
-    <div class="flex flex-col text-center items-center text-white space-y-6 pt-20">
+    <div class="flex flex-col text-center items-center text-white space-y-6 pt-20 pb-32">
       <h1 class="text-[18px]">Revolutionalize the way you work</h1>
       <p class=" w-[75%] font-light text-[16px] md:text-[15px]">Your smart tool for making work easier and more
         enjoyable—perfect
@@ -255,14 +257,13 @@
         professionals.</p>
     </div>
 
-    <div
-      class="px-6 flex flex-col space-y-20 md:space-x-6 items-center justify-center md:flex-row md:space-y-0 pt-20 md:container mx-auto pb-20 md:pb-0">
+    <div class="grid grid-cols-1 md:grid-cols-4 pb-24 px-6 md:container gap-6 mx-auto my-8 ">
 
       <!--first container-->
-      <div class="space-y-10 w-[90%]  md:w-[28%]">
+      <div class=" text-white flex flex-col gap-8 justify-between">
         <!--first container headings-->
-        <div class=" section3-heading-container  ">
-          <h1 class="max-w-md text-[17px] md:text-[18px] font-semibold ">
+        <div class="p-2">
+          <h1 class="text-[17px] md:text-[18px] font-semibold ">
             Hiring Managers
           </h1>
           <p class=" w-[90%] text-[15px] font-light">Send responses to job proposals with ease</p>
@@ -272,16 +273,16 @@
         <!--first containter image-->
         <div class="section3-img-container">
           <img src="../assets/images/section3topimg1.svg" alt="">
-          <img src="../assets/images/section3bottomimage1.svg" alt="" class="flex md:hidden">
+          <img src="../assets/images/section3bottomimage1.svg" alt="">
         </div>
 
 
       </div>
 
       <!--second container-->
-      <div class="space-y-10 w-[90%]  md:w-[28%]">
+      <div class="  text-white  flex flex-col gap-8 justify-between">
         <!--second container headings-->
-        <div class="section3-heading-container ">
+        <div class=" p-2">
           <h1 class="max-w-md text-[17px] md:text-[18px] font-semibold ">
             Project Managers
           </h1>
@@ -291,39 +292,39 @@
 
 
         <!--second containter image-->
-        <div class="section3-img-container2">
+        <div class="section3-img-container">
           <img src="../assets/images/section3topImage2.svg" alt="">
-          <img src="../assets/images/section3bottomimage2.svg" alt="" class="flex md:hidden">
+          <img src="../assets/images/section3bottomimage2.svg" alt="">
         </div>
 
 
       </div>
 
       <!--third section-->
-      <div class="space-y-10 w-[90%] md:w-[28%]">
+      <div class="  text-white  flex flex-col gap-8 justify-between ">
         <!--third section headings-->
-        <div class="section3-heading-container ">
+        <div class=" p-2">
           <h1 class="max-w-md text-[17px] md:text-[18px] font-semibold ">
             Sales Professionals
           </h1>
-          <p class="  max-w-sm text-[15px] font-light">Craft perfect sales outreach emails and follow-ups
+          <p class=" text-[15px] font-light">Craft perfect sales outreach emails and follow-ups
             effortlessly
           </p>
         </div>
 
         <!--third containter image-->
-        <div class="section3-img-container3">
+        <div class="w-full flex flex-col">
           <img src="../assets/images/section3topImage3.svg" alt="">
-          <img src="../assets/images/section3bottomimage3.svg" alt="" class="flex md:hidden">
+          <img src="../assets/images/section3bottomimage3.svg" alt="">
         </div>
 
 
       </div>
 
       <!--fourth container-->
-      <div class="space-y-10 w-[90%]  md:w-[28%]">
+      <div class="  text-white  flex flex-col gap-8 justify-between ">
         <!--fourth container headings-->
-        <div class="section3-heading-container">
+        <div class="p-2">
           <h1 class="max-w-md text-[17px] md:text-[18px] font-semibold ">
             Customer Support Agents
           </h1>
@@ -332,9 +333,9 @@
 
 
         <!--fourth containter image-->
-        <div class="section3-img-container4">
+        <div class="section3-img-container">
           <img src="../assets/images/section3topImage4.svg" alt="">
-          <img src="../assets/images/section3bottomImage4.svg" alt="" class="flex md:hidden ">
+          <img src="../assets/images/section3bottomImage4.svg" alt="">
         </div>
 
 
@@ -345,31 +346,14 @@
 
   </section>
 
-  <!--section five-->
-  <section>
-    <div class="hidden md:flex container items-center  mx-auto space-x-6 px-6 border-4 border-red-700">
-      <div class="w-[33%] flex items-center justify-center">
-        <img src="../assets/images/section3bottomimage1.svg" alt="">
-      </div>
-      <div class="w-[33%] flex items-center justify-center">
-        <img src="../assets/images/section3bottomimage2.svg" alt="">
-      </div>
-      <div class="w-[33%] flex items-center justify-center">
-        <img src="../assets/images/section3bottomimage3.svg" alt="">
-      </div>
-
-      <div class="w-[33%] flex items-center justify-center">
-        <img src="../assets/images/section3bottomimage4.svg" alt="" class="">
-      </div>
-    </div>
-  </section>
 
   <!--Faq Section-->
-  <section class="">
+  <section class="bg-white">
 
 
 
-    <div class="px-6 flex flex-col space-y-5 items-center py-20 md:container mx-auto">
+    <div
+      class="px-6 flex flex-col space-y-5 items-center bg-white md:-mt-[360px] py-16 md:pt-[320px] md:container mx-auto">
       <div>
         <h1 class="font-semibold text-[18px] md:text-[26px] pb-12">Frequently asked questions</h1>
       </div>

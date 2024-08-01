@@ -132,7 +132,16 @@
 }
 
 .faq-Question-div {
-  @apply ring-1 ring-black w-full px-4 md:px-10 h-16 rounded-xl flex items-center justify-between md:w-full;
+  @apply w-full px-4 md:px-10 h-16 rounded-xl flex items-center justify-between relative;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to right,
+    #2ac7faa6,
+    #ff3554a6,
+    #7c60dca6,
+    #00000033
+  );
 }
 
 .faq-Answer-p {
@@ -142,3 +151,7 @@
 .faq-Answer-div {
   @apply bg-white px-4 md:px-10 hidden drop-shadow-md;
 } */
+
+.getStarted-classifies-div {
+  @apply flex items-center bg-white md:bg-[#F5F5F5] w-full px-2 py-2 rounded-xl ring-2 ring-Gray100;
+}

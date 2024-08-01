@@ -29,7 +29,7 @@ const resetBtn = document.querySelector(".resetBtn");
 const passwordMatch = document.querySelector(".passwordMatch");
 const passwordConfirm = document.querySelector(".passwordConfirm");
 const faqDropdown = document.querySelectorAll(".faqDropdown");
-const faqAnswer = document.querySelector(".faqAnswer");
+// const faqAnswer = document.querySelector("faqAnswer");
 const faqAnswerAll = document.querySelectorAll(".faqAnswer");
 
 if (menuBtn) {
@@ -136,16 +136,60 @@ if (passwordInput && emptyPassword) {
   });
 }
 
+// if (hideRadio) {
+//   hideRadio.addEventListener("click", function () {
+//     if (hideRadio.classList.contains("bg-white")) {
+//       hideRadio.classList.remove("bg-white");
+//       hideRadio.classList.add("bg-blue-600");
+//     } else {
+//       hideRadio.classList.remove("bg-blue-600");
+//       hideRadio.classList.add("bg-white");
+//     }
+
+//     if (authenticationBtn) {
+//       if (authenticationBtn.classList.contains("opacity-40")) {
+//         authenticationBtn.classList.remove("opacity-40");
+//         authenticationBtn.classList.add("opacity-100");
+//       } else {
+//         authenticationBtn.classList.remove("opacity-100");
+//         authenticationBtn.classList.add("opacity-40");
+//       }
+//     }
+
+//     if (loginVerification) {
+//       if (loginVerification.classList.contains("opacity-40")) {
+//         loginVerification.classList.remove("opacity-40");
+//         loginVerification.classList.add("opacity-100");
+//       } else {
+//         loginVerification.classList.remove("opacity-100");
+//         loginVerification.classList.add("opacity-40");
+//       }
+//     }
+//   });
+// }
+
 if (hideRadio) {
   hideRadio.addEventListener("click", function () {
-    if (hideRadio.classList.contains("bg-white")) {
-      hideRadio.classList.remove("bg-white");
-      hideRadio.classList.add("bg-blue-600");
-    } else {
-      hideRadio.classList.remove("bg-blue-600");
-      hideRadio.classList.add("bg-white");
+    toggleClass(hideRadio, "bg-white", "bg-blue-600");
+
+    if (authenticationBtn) {
+      toggleClass(authenticationBtn, "opacity-40", "opacity-100");
+    }
+
+    if (loginVerification) {
+      toggleClass(loginVerification, "opacity-40", "opacity-100");
     }
   });
+}
+
+function toggleClass(element, class1, class2) {
+  if (element.classList.contains(class1)) {
+    element.classList.remove(class1);
+    element.classList.add(class2);
+  } else {
+    element.classList.remove(class2);
+    element.classList.add(class1);
+  }
 }
 
 if (emailLoginInput && passwordLoginInput && loginVerification) {

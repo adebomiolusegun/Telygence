@@ -76,12 +76,21 @@
           <div class="w-full flex items-center justify-between ring-1 ring-Gray400 py-1 px-3 rounded-xl bg-white">
             <input id="gettingStartedInput" type="text"
               class="w-full mx-auto px-4 py-3 outline-none placeholder:text-Gray200" placeholder="Select one">
-            <svg onclick="openDropDown()" id="gettingStartedDropdownIcon" class="ml-auto w-8 cursor-pointer"
-              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-            </svg>
+            <button type="button" class="toggleArrow flex flex-row justify-center items-center focus:outline-none">
 
+              <svg xmlns="http://www.w3.org/2000/svg" id="gettingStartedArrowUp" class=" w-8 cursor-pointer"
+                viewBox="0 0 24 24">
+                <rect width="24" height="24" fill="none" />
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" d="m17 14l-5-5l-5 5" />
+              </svg>
+
+              <svg id="gettingStartedArrowDown" class=" hidden w-8 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+
+            </button>
           </div>
 
           <div

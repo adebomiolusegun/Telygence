@@ -41,7 +41,7 @@
 }
 
 .inputdiv {
-  @apply flex-1 flex flex-row align-middle rounded-xl ring-1 ring-slate-300 justify-evenly bg-white py-1 px-[10px];
+  @apply flex-1 flex flex-row align-middle rounded-xl ring-1   justify-evenly bg-white py-1 px-2.5;
 }
 
 .reset-password-input {

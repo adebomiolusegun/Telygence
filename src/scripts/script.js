@@ -4,7 +4,9 @@ const mainMenu = document.getElementById("article");
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const closeMenu = document.getElementById("close-menu");
-const redBorder = document.getElementById("borderRed");
+const emailDiv = document.getElementById("emailDiv");
+const passwordDiv = document.getElementById("passwordDiv");
+const inputdiv = document.querySelector(".inputdiv");
 const emailInput = document.querySelector(".emailInput");
 const emptyEmail = document.querySelector(".emptyEmail");
 const invalidEmail = document.querySelector(".invalidEmail");
@@ -21,16 +23,35 @@ const passwordLoginInput = document.getElementById("passwordLoginInput");
 const emailNotFound = document.getElementById("emailNotFound");
 const incorrectPassword = document.getElementById("incorrectPassword");
 const loginVerification = document.getElementById("loginVerification");
-const getStartedIcon = document.getElementById("gettingStartedDropdownIcon");
-const getStartedDropdown = document.getElementById("gettingStartedDropdown");
 const menuItem = document.querySelectorAll(".menu-item");
-const gettingStartedInput = document.getElementById("gettingStartedInput");
 const resetBtn = document.querySelector(".resetBtn");
 const passwordMatch = document.querySelector(".passwordMatch");
 const passwordConfirm = document.querySelector(".passwordConfirm");
-const faqDropdown = document.querySelectorAll(".faqDropdown");
-// const faqAnswer = document.querySelector("faqAnswer");
-const faqAnswerAll = document.querySelectorAll(".faqAnswer");
+const faqDropdowns = document.querySelectorAll(".toggleFaqArrow");
+const faqAnswers = document.querySelectorAll(".faqAnswer");
+const faqArrowsUp = document.querySelectorAll(".faqArrowUp");
+const faqArrowsDown = document.querySelectorAll(".faqArrowDown");
+const clearInput = document.querySelector(".clearInput");
+const inputGetStarted = document.querySelector(".inputGetStarted");
+const gettingStartedInput = document.getElementById("gettingStartedInput");
+const gettingStartedArrowUp = document.getElementById("gettingStartedArrowUp");
+const gettingStartedArrowDown = document.getElementById(
+  "gettingStartedArrowDown"
+);
+const getStartedDropdown = document.getElementById("gettingStartedDropdown");
+const toggleArrow = document.querySelector(".toggleArrow");
+
+function toggleClass(element, class1, class2) {
+  if (element && element.classList) {
+    if (element.classList.contains(class1)) {
+      element.classList.remove(class1);
+      element.classList.add(class2);
+    } else {
+      element.classList.remove(class2);
+      element.classList.add(class1);
+    }
+  }
+}
 
 if (menuBtn) {
   menuBtn.addEventListener("click", function (e) {
@@ -51,9 +72,31 @@ if (closeMenu) {
   });
 }
 
-const openDropDown = () => {
-  getStartedDropdown.classList.toggle("hidden");
-};
+if (gettingStartedArrowUp && getStartedDropdown && gettingStartedArrowDown) {
+  // gettingStartedArrowDown.addEventListener("click", function () {
+  //   getStartedDropdown.classList.remove("hidden");
+  //   gettingStartedArrowUp.classList.remove("hidden");
+  //   gettingStartedArrowDown.classList.add("hidden");
+  // });
+
+  // gettingStartedArrowUp.addEventListener("click", function () {
+  //   getStartedDropdown.classList.add("hidden");
+  //   gettingStartedArrowUp.classList.add("hidden");
+  //   gettingStartedArrowDown.classList.remove("hidden");
+  // });
+
+  if (gettingStartedArrowUp && getStartedDropdown && gettingStartedArrowDown) {
+    function toggleDropdown() {
+      const toggleArrows = getStartedDropdown.classList.contains("hidden");
+      getStartedDropdown.classList.toggle("hidden", !toggleArrows);
+      gettingStartedArrowUp.classList.toggle("hidden", toggleArrows);
+      gettingStartedArrowDown.classList.toggle("hidden", !toggleArrows);
+    }
+
+    gettingStartedArrowDown.addEventListener("click", toggleDropdown);
+    gettingStartedArrowUp.addEventListener("click", toggleDropdown);
+  }
+}
 
 if (menuItem) {
   menuItem.forEach((items) => {
@@ -83,7 +126,18 @@ if (emailInput && passwordInput && authenticationBtn) {
     if (emailInput.value === "") {
       emptyEmail.classList.add("hidden");
     }
+
+    toggleClass(emailDiv, "ring-red-300", "ring-slate-300");
   });
+
+  passwordInput.addEventListener("input", function () {
+    if (passwordInput.value === "") {
+      emptyPassword.classList.add("hidden");
+    }
+
+    toggleClass(passwordDiv, "ring-red-300", "ring-slate-300");
+  });
+
   authenticationBtn.addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -92,6 +146,7 @@ if (emailInput && passwordInput && authenticationBtn) {
     if (emailInput.value.length === 0) {
       emptyEmail.classList.remove("hidden");
       invalidEmail.classList.add("hidden");
+      toggleClass(emailDiv, "ring-slate-300", "ring-red-300");
 
       hasError = true;
     } else {
@@ -101,6 +156,7 @@ if (emailInput && passwordInput && authenticationBtn) {
     if (passwordInput.value.length === 0) {
       emptyPassword.classList.remove("hidden");
       passwordLength.classList.add("hidden");
+      toggleClass(passwordDiv, "ring-slate-300", "ring-red-300");
       hasError = true;
     } else {
       emptyPassword.classList.add("hidden");
@@ -111,6 +167,7 @@ if (emailInput && passwordInput && authenticationBtn) {
     }
   });
 }
+
 if (emailInput && invalidEmail && emptyEmail) {
   const emailValidation = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
   emailInput.addEventListener("input", function () {
@@ -136,38 +193,6 @@ if (passwordInput && emptyPassword) {
   });
 }
 
-// if (hideRadio) {
-//   hideRadio.addEventListener("click", function () {
-//     if (hideRadio.classList.contains("bg-white")) {
-//       hideRadio.classList.remove("bg-white");
-//       hideRadio.classList.add("bg-blue-600");
-//     } else {
-//       hideRadio.classList.remove("bg-blue-600");
-//       hideRadio.classList.add("bg-white");
-//     }
-
-//     if (authenticationBtn) {
-//       if (authenticationBtn.classList.contains("opacity-40")) {
-//         authenticationBtn.classList.remove("opacity-40");
-//         authenticationBtn.classList.add("opacity-100");
-//       } else {
-//         authenticationBtn.classList.remove("opacity-100");
-//         authenticationBtn.classList.add("opacity-40");
-//       }
-//     }
-
-//     if (loginVerification) {
-//       if (loginVerification.classList.contains("opacity-40")) {
-//         loginVerification.classList.remove("opacity-40");
-//         loginVerification.classList.add("opacity-100");
-//       } else {
-//         loginVerification.classList.remove("opacity-100");
-//         loginVerification.classList.add("opacity-40");
-//       }
-//     }
-//   });
-// }
-
 if (hideRadio) {
   hideRadio.addEventListener("click", function () {
     toggleClass(hideRadio, "bg-white", "bg-blue-600");
@@ -180,16 +205,6 @@ if (hideRadio) {
       toggleClass(loginVerification, "opacity-40", "opacity-100");
     }
   });
-}
-
-function toggleClass(element, class1, class2) {
-  if (element.classList.contains(class1)) {
-    element.classList.remove(class1);
-    element.classList.add(class2);
-  } else {
-    element.classList.remove(class2);
-    element.classList.add(class1);
-  }
 }
 
 if (emailLoginInput && passwordLoginInput && loginVerification) {
@@ -244,21 +259,40 @@ if (resetBtn) {
   });
 }
 
-if (faqDropdown) {
-  for (let i = 0; i < faqDropdown.length; i++) {
-    faqDropdown[i].addEventListener("click", function (e) {
-      e.preventDefault();
+for (let i = 0; i < faqDropdowns.length; i++) {
+  faqDropdowns[i].addEventListener("click", function (e) {
+    e.preventDefault();
 
-      let faqAnswer = this.parentElement.nextElementSibling;
+    const faqAnswer = this.parentElement.nextElementSibling;
+    const faqArrowUp = this.querySelector(".faqArrowUp");
+    const faqArrowDown = this.querySelector(".faqArrowDown");
 
-      if (faqAnswer.classList.contains("hidden")) {
-        for (let a = 0; a < faqAnswerAll.length; a++) {
-          faqAnswerAll[a].classList.add("hidden");
-        }
-        faqAnswer.classList.remove("hidden");
-      } else {
-        faqAnswer.classList.add("hidden");
+    // Hide all FAQ answers and show all arrow ups
+    for (let j = 0; j < faqAnswers.length; j++) {
+      if (faqAnswers[j] !== faqAnswer) {
+        faqAnswers[j].classList.add("hidden");
+        faqArrowsUp[j].classList.remove("hidden");
+        faqArrowsDown[j].classList.add("hidden");
       }
-    });
-  }
+    }
+
+    // Toggle the current FAQ answer and arrows
+    if (faqAnswer.classList.contains("hidden")) {
+      faqAnswer.classList.remove("hidden");
+      faqArrowUp.classList.add("hidden");
+      faqArrowDown.classList.remove("hidden");
+    } else {
+      faqAnswer.classList.add("hidden");
+      faqArrowUp.classList.remove("hidden");
+      faqArrowDown.classList.add("hidden");
+    }
+  });
+}
+
+if (clearInput) {
+  clearInput.addEventListener("click", function () {
+    if (inputGetStarted) {
+      inputGetStarted.value = "";
+    }
+  });
 }

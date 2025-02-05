@@ -61,8 +61,16 @@
 
             <!--password input-->
 
+
+
             <div class=" relative font-[13px] md:flex md:space-x-9 pt-8">
-              <p class="w-[69px] font-[400] text-[13px] self-center">password</p>
+              <p class="hidden md:flex w-[69px] font-[400] text-[13px] self-center">password</p>
+              <div class="md:hidden flex">
+                <p class="w-[69px] mr-auto font-[400] text-[13px] self-center">password</p>
+                <p class=" ml-auto font-[400] text-[12px] text-textGradiantTwo"><a href="forgot-password.html">Forgot
+                    password</a></p>
+              </div>
+
               <div class="inputdiv flex flex-row items-center  gap-[5px]" id="borderRed">
                 <svg class="Authentication-icons" width="20" height="20" viewBox="0 0 15 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -110,6 +118,12 @@
           <p class="passwordLength text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] hidden"> Please enter your
             password
           </p>
+
+          <div class="hidden md:flex font-[400] text-[13px] md:text-right md:text-[12px] text-textGradiantTwo">
+            <a href="forgot-password.html" class="ml-auto">Forgot
+              password</a>
+          </div>
+
 
 
           <p id="incorrectPassword" class=" text-[10px] pt-1 text-red-500 md:text-right md:text-[12px] hidden">
@@ -182,7 +196,7 @@
           </div>
           <div class=" flex font-normal  text-[15px] space-x-1 text-gray300 md:hidden pt-5 ">
             <p class="text-signupintruction font-normal leading-[20.16px]">Have an account already?</p>
-            <a href="#" class="text-Logincolor">Sign up</a>
+            <a href="signup.html" class="text-Logincolor">Sign up</a>
           </div>
 
         </div>

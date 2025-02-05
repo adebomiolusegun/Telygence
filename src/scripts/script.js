@@ -23,6 +23,7 @@ const passwordLoginInput = document.getElementById("passwordLoginInput");
 const emailNotFound = document.getElementById("emailNotFound");
 const incorrectPassword = document.getElementById("incorrectPassword");
 const loginVerification = document.getElementById("loginVerification");
+const otpInputs = document.querySelectorAll(".verificationinput");
 const menuItem = document.querySelectorAll(".menu-item");
 const resetBtn = document.querySelector(".resetBtn");
 const passwordMatch = document.querySelector(".passwordMatch");
@@ -40,6 +41,9 @@ const gettingStartedArrowDown = document.getElementById(
 );
 const getStartedDropdown = document.getElementById("gettingStartedDropdown");
 const toggleArrow = document.querySelector(".toggleArrow");
+
+const passValidation = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,}$/;
+const emailValidation = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
 
 function toggleClass(element, class1, class2) {
   if (element && element.classList) {
@@ -123,37 +127,38 @@ if (togglePassword) {
 
 if (emailInput && passwordInput && authenticationBtn) {
   emailInput.addEventListener("input", function () {
-    if (emailInput.value === "") {
+    if (!emailValidation.test(emailInput.value)) {
+      invalidEmail.classList.remove("hidden");
       emptyEmail.classList.add("hidden");
+    } else {
+      invalidEmail.classList.add("hidden");
     }
-
     toggleClass(emailDiv, "ring-red-300", "ring-slate-300");
   });
 
   passwordInput.addEventListener("input", function () {
-    if (passwordInput.value === "") {
+    if (!passValidation.test(passwordInput.value)) {
+      passwordLength.classList.remove("hidden");
       emptyPassword.classList.add("hidden");
+    } else {
+      passwordLength.classList.add("hidden");
     }
-
     toggleClass(passwordDiv, "ring-red-300", "ring-slate-300");
   });
 
   authenticationBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-
     let hasError = false;
 
-    if (emailInput.value.length === 0) {
+    if (emailInput.value.trim() === "") {
       emptyEmail.classList.remove("hidden");
       invalidEmail.classList.add("hidden");
       toggleClass(emailDiv, "ring-slate-300", "ring-red-300");
-
       hasError = true;
     } else {
       emptyEmail.classList.add("hidden");
     }
 
-    if (passwordInput.value.length === 0) {
+    if (passwordInput.value.trim() === "") {
       emptyPassword.classList.remove("hidden");
       passwordLength.classList.add("hidden");
       toggleClass(passwordDiv, "ring-slate-300", "ring-red-300");
@@ -162,14 +167,25 @@ if (emailInput && passwordInput && authenticationBtn) {
       emptyPassword.classList.add("hidden");
     }
 
-    if (hasError) {
+    if (!emailValidation.test(emailInput.value)) {
+      invalidEmail.classList.remove("hidden");
+      hasError = true;
+    }
+
+    if (!passValidation.test(passwordInput.value)) {
+      passwordLength.classList.remove("hidden");
+      hasError = true;
+    }
+
+    if (!hasError) {
+      window.location.href = "verification.html";
+    } else {
       e.preventDefault();
     }
   });
 }
 
 if (emailInput && invalidEmail && emptyEmail) {
-  const emailValidation = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
   emailInput.addEventListener("input", function () {
     if (!emailValidation.test(emailInput.value)) {
       invalidEmail.classList.remove("hidden");
@@ -181,8 +197,6 @@ if (emailInput && invalidEmail && emptyEmail) {
 }
 
 if (passwordInput && emptyPassword) {
-  const passValidation = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,}$/;
-
   passwordInput.addEventListener("input", function () {
     if (!passValidation.test(passwordInput.value)) {
       passwordLength.classList.remove("hidden");
@@ -217,27 +231,38 @@ if (emailLoginInput && passwordLoginInput && loginVerification) {
     passwordLength.classList.add("hidden");
     incorrectPassword.classList.add("hidden");
   });
+
   loginVerification.addEventListener("click", function (e) {
     e.preventDefault();
+
+    let isEmailValid = false;
+    let isPasswordValid = false;
+
     if (emailLoginInput.value === "") {
       invalidEmail.classList.remove("hidden");
       emailNotFound.classList.add("hidden");
-    } else if (emailLoginInput.value !== "onyekamgbikeh@yahoo.com") {
+    } else if (emailLoginInput.value !== "adebomiolusegun1@gmail.com") {
       emailNotFound.classList.remove("hidden");
       invalidEmail.classList.add("hidden");
     } else {
       emailNotFound.classList.add("hidden");
       invalidEmail.classList.add("hidden");
+      isEmailValid = true;
     }
 
     if (passwordLoginInput.value === "") {
       passwordLength.classList.remove("hidden");
-    } else if (passwordLoginInput.value !== "Ade.2021") {
+    } else if (passwordLoginInput.value !== "Ade.2025") {
       incorrectPassword.classList.remove("hidden");
       passwordLength.classList.add("hidden");
     } else {
       incorrectPassword.classList.add("hidden");
       passwordLength.classList.add("hidden");
+      isPasswordValid = true;
+    }
+
+    if (isEmailValid && isPasswordValid) {
+      window.location.href = "dashboard.html";
     }
   });
 }
@@ -257,6 +282,34 @@ if (resetBtn) {
       passwordMatch.classList.add("hidden");
     }
   });
+}
+
+if (otpInputs) {
+  otpInputs.forEach((input, index) => {
+    input.addEventListener("input", (e) => {
+      const value = e.target.value;
+      if (value && index < otpInputs.length - 1) {
+        otpInputs[index + 1].focus();
+      }
+    });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !e.target.value && index > 0) {
+        otpInputs[index - 1].focus();
+      }
+    });
+  });
+
+  // const clearOtp = () => {
+  //   otpInputs.forEach((input) => (input.value = ""));
+  //   otpInputs[0].focus();
+  // };
+
+  // // const clearButton = document.createElement("button");
+  // // clearButton.textContent = "Clear OTP";
+  // // clearButton.className = "onbordingbutton mt-5";
+  // // clearButton.addEventListener("click", clearOtp);
+  // // document.querySelector(".pb-10").appendChild(clearButton);
 }
 
 for (let i = 0; i < faqDropdowns.length; i++) {

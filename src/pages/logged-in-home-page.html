@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../styles/output.css">
+</head>
+
+<body>
+
+  <header class="h-screen md:h-auto mobile-bg md:bg overflow-x-hidden pb-16">
+    <!--nav bar-->
+    <nav class="relative md:container mx-auto p-6">
+      <div class=" flex items-center justify-between ">
+        <!--logo-->
+        <div class="w-32">
+          <a href="index.html"><img src="../assets/images/logo.png" alt=""></a>
+        </div>
+
+        <div class="hidden md:flex space-x-6 text-[18px] font-light">
+          <div class="flex">
+            <a href="">Features</a>
+            <svg id="gettingStartedArrowDown" class="w-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+          <a href="">Sync with app</a>
+          <a href="">Extension</a>
+          <div class="flex">
+            <a href="support.html">Support</a>
+            <svg id="gettingStartedArrowDown" class="w-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="hidden md:flex space-x-2 items-center ">
+
+          <a href=""
+            class="p-3 px-6 pt-2 text-center rounded-full text-white text-[13px] bg-gradient-to-t from-landbtnGradiantTwo to-landbtnGradiantOne">Get
+            Started Free</a>
+        </div>
+
+        <svg class="w-5 flex md:hidden" id="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>
+
+        <svg class=" hidden md:hidden w-5" id="close-menu" xmlns="http://www.w3.org/2000/svg" fill="none"
+          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+
+      </div>
+
+      <div class="absolute w-full hidden md:hidden h-screen " id="mobile-menu">
+        <div class="absolute pt-10 w-full h-full items-start flex flex-col space-y-10 z-20">
+          <a href="" class="dropdown-li-bg">features</a>
+          <a href="" class="dropdown-li-bg">sync with app</a>
+          <a href="" class="dropdown-li-bg">service</a>
+          <a href="support.html" class="dropdown-li-bg">support</a>
+
+          <div class="bg-red-500">
+            <a href="login.html"
+              class="flex items-center justify-center md:hidden p-3 w-2/4 mb-3 py-4 px-12 text-center rounded-full text-[10px] bg-white text-Btngradianttwo ring-2 ring-Btngradianttwo">
+              Login
+            </a>
+
+            <div class=" button text-center w-44">
+              <a href="">Get Extension</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--first section-->
+    <section class="">
+      <div
+        class="md:container flex flex-col justify-center items-center px-6 mx-auto space-y-0 md:flex-row  md:space-y-0 py-20"
+        id="article">
+        <!--right item-->
+        <div class="flex flex-col space-y-12 md:w-1/2">
+          <a href="" class="text-[10px] text-center font-light  self-center"
+            style="border: 2px solid; padding: 1rem; width: 20rem; border-radius: 10rem; border-image: linear-gradient(to right, var(--borderGradiantOne), var(--borderGradiantTwo), var(--borderGradiantThree)) 1;">
+            TRY NOW - IT’S REALLY FREE!
+          </a>
+
+          <h1 class="text-[21px] md:text-[56px] text-center md:text-left font-semibold">
+            <span class="text-Btngradianttwo">Boost </span>your productivity with Telygence <span
+              class="text-borderGradiantTwo">AI</span>
+          </h1>
+
+          <P class="text-[12px] md:text-[21px] text-center md:text-left font-light">
+            Tired of typing the same messages over and over? Telygence AI says buh-bye to repetitive typing. Just one
+            click and you're done!
+          </P>
+
+          <div class="flex items-center justify-center md:justify-start  md:space-x-6">
+            <a href=""
+              class=" py-4 px-16  text-center rounded-full text-white text-[10px] bg-gradient-to-t from-landbtnGradiantTwo to-landbtnGradiantOne ">Use
+              App</a>
+
+            <a href=""
+              class="hidden md:flex p-3 py-4 px-16 text-center rounded-full text-[10px] bg-white text-Btngradianttwo ring-2 ring-Btngradianttwo">Add
+              to
+              Chrome</a>
+          </div>
+        </div>
+
+        <!--left item the image-->
+        <div class="md:w-1/2  flex justify-center  items-center pb-14 pt-10 md:justify-end ">
+          <img src=" ../assets/images/hero-gif.svg" alt="" class="  w-full md:w-[90%]">
+        </div>
+
+      </div>
+    </section>
+  </header>
+
+  <div class="w-full h-20 bg-gradient-to-r from-Btngradianttwo via-Logincolortwo to-Btngradianttwo ">
+    <div class="bg-cover bg-center w-full h-full opacity-20 z-10 ..."
+      style="background-image: url('../assets/images/unsplash.jpg')">
+    </div>
+  </div>
+
+  <script src="../scripts/script.js"></script>
+</body>
+
+</html>

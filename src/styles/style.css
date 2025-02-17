@@ -41,9 +41,12 @@
 }
 
 .inputdiv {
-  @apply flex-1 flex flex-row align-middle rounded-xl ring-1   justify-evenly bg-white py-1 px-2.5;
+  @apply flex-1 flex flex-row align-middle rounded-xl ring-2 ring-[#999999]/70 justify-evenly bg-white py-1 px-2.5;
 }
 
+.inputdiv-support {
+  @apply flex-1 flex flex-row align-middle rounded-full ring-2 ring-[#999999]/70 justify-evenly bg-white py-1 px-2.5;
+}
 .reset-password-input {
   @apply w-full md:w-[135px] font-[400] text-[12px] self-center;
 }

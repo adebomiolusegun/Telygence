@@ -262,7 +262,7 @@ if (emailLoginInput && passwordLoginInput && loginVerification) {
     }
 
     if (isEmailValid && isPasswordValid) {
-      window.location.href = "dashboard.html";
+      window.location.href = "getting-started.html";
     }
   });
 }

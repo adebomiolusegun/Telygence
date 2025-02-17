@@ -10,149 +10,169 @@
   <link rel="stylesheet" href="../styles/output.css">
 </head>
 
-<body>
 
-  <body class="mobile-bg md:bg m-w-[100vw] h-auto overflow-x-hidden">
-    <section class="flex items-center flex-col  md:justify-center h-screen w-screen">
 
-      <!-- container-->
-      <div
-        class=" w-[90%] h-auto  flex items-center flex-col rounded-3xl md:shadow-lg  md:row md:border-2 md:w-4/5 md:bg-white">
-        <div class=" w-full flex flex-col items-center justify-between md:w-4/5 ">
-          <!--logo-->
-          <div class="pt-10 ">
-            <img src="../assets/images/logo.png" alt="" class="logo">
+<body class="mobile-bg md:bg m-w-[100vw] h-auto overflow-x-hidden">
+  <section class="flex items-center flex-col  md:justify-center h-screen w-screen">
+
+    <!-- container-->
+    <div
+      class=" w-[90%] h-auto  flex items-center flex-col rounded-3xl md:shadow-lg  md:row md:border-2 md:w-4/5 md:bg-white">
+      <div class=" w-full flex flex-col items-center justify-between md:w-4/5 ">
+        <!--logo-->
+        <div class="pt-10 ">
+          <img src="../assets/images/logo.png" alt="" class="logo">
+        </div>
+
+        <!--getting started font-->
+        <div class="text-center pt-10 ">
+          <h4 class="font-semibold mb-3 text-[18px] md:text-[22px] leading[22.72px]">Getting Started</h4>
+          <div class="w-[17rem] md:w-full">
+            <p class="mb-8 font-[300] text-[14px] md:text-[15px] leading[18.9px]">Your journey to effective work and
+              productivity begins here.
+            </p>
           </div>
+        </div>
 
-          <!--getting started font-->
-          <div class="text-center pt-10 ">
-            <h4 class="font-semibold mb-3 text-[18px] md:text-[22px] leading[22.72px]">Getting Started</h4>
-            <div class="w-[17rem] md:w-full">
-              <p class="mb-8 font-[300] text-[14px] md:text-[15px] leading[18.9px]">Your journey to effective work and
-                productivity begins here.
-              </p>
-            </div>
-          </div>
+        <div class="space-y-5 items-center justify-center">
 
-          <div class="space-y-5 items-center justify-center">
+          <div class=" flex gap-6 items-center justify-center">
 
-            <div class=" flex gap-6 items-center justify-center">
-
-
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                </svg>
-
-              </div>
-
-              <div class="flex gap-2">
-
-                <p>3</p>
-                <p>of</p>
-                <p>3</p>
-              </div>
-
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                </svg>
-
-              </div>
-            </div>
-
-            <div class="flex space-x-4 justify-between">
-              <div class=" ring-0 ring-Gray200 border-4 border-Gray400  w-10 rounded-3xl"></div>
-              <div class=" ring-0 ring-Gray200 border-4 border-Gray400  w-10 rounded-3xl"></div>
-              <div class=" ring-0 ring-Gray200 border-4 border-Gray400  w-10 rounded-3xl"></div>
-            </div>
-          </div>
-
-          <div class="pt-10 pb-10 w-full text-center">
-            <p>What area do you work in?</p>
-          </div>
-
-          <div class="w-full relative pb-40 md:pb-20">
-            <div class="w-full flex items-center justify-between ring-1 ring-Gray400 py-1 px-3 rounded-xl bg-white">
-              <input id="gettingStartedInput" type="text"
-                class="w-full mx-auto px-4 py-3 outline-none placeholder:text-Gray200" placeholder="Product">
-              <svg onclick="openDropDown()" class="ml-auto w-8  cursor-pointer" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            <div>
+              <svg class="hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
               </svg>
 
             </div>
 
-            <div
-              class=" hidden h-48 md:h-64 absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none overflow-y-scroll"
-              id="gettingStartedDropdown">
-              <div class=" py-1" role="none" class="overflow-y-scroll">
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Administrative</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Customer Support</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Education</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Engineering</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Finance</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Founder/CEO</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Healthcare</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Human Resources</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Information Technology</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Legal</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Logistics</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Marketing</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Management</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Operations</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Product</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Quality Assurance</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Real Estate</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Recruiting</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Research</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Sales</p>
-                <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
-                  tabindex="-1">Other</p>
+            <div class="flex gap-2">
+              <p>3</p>
+              <p>of</p>
+              <p>3</p>
+            </div>
 
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
 
-              </div>
             </div>
           </div>
 
-          <div class=" w-full pb-10">
-            <a href="index.html" class="onbordingbutton w-full text-center block ">Next</a>
+          <div class="flex space-x-4 justify-between">
+            <div class=" ring-0 ring-Gray200 border-4 border-Gray400  w-10 rounded-3xl"></div>
+            <div class=" ring-0 ring-Gray200 border-4 border-Gray400  w-10 rounded-3xl"></div>
+            <div class=" ring-0 ring-Gray200 border-4 border-Gray400  w-10 rounded-3xl"></div>
+          </div>
+        </div>
+
+        <div class="pt-10 pb-10 w-full text-center">
+          <p>What area do you work in?</p>
+        </div>
+
+        <div class="w-full relative pb-40 md:pb-20">
+          <div class="w-full flex items-center justify-between ring-1 ring-Gray400 py-1 px-3 rounded-xl bg-white">
+            <input id="gettingStartedInput" type="text"
+              class="w-full mx-auto px-4 py-3 outline-none placeholder:text-Gray200" placeholder="Product">
+            <button type="button" class="toggleArrow flex flex-row justify-center items-center focus:outline-none">
+
+              <svg xmlns="http://www.w3.org/2000/svg" id="gettingStartedArrowUp" class=" w-8 cursor-pointer"
+                viewBox="0 0 24 24">
+                <rect width="24" height="24" fill="none" />
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" d="m17 14l-5-5l-5 5" />
+              </svg>
+
+              <svg id="gettingStartedArrowDown" class=" hidden w-8 cursor-pointer" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+
+            </button>
           </div>
 
+          <div
+            class=" hidden h-40 absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none overflow-y-scroll"
+            id="gettingStartedDropdown">
+            <div class=" py-1" role="none" class="overflow-y-scroll">
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">
+                Administrative</p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Customer
+                Support</p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Education
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Engineering
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Finance</p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Founder/CEO
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Healthcare
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Human
+                Resources</p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Information
+                Technology</p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Legal</p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Logistics
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Marketing
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Management
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Operations
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Product</p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Quality
+                Assurance</p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Real Estate
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Recruiting
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Research
+              </p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Sales</p>
+              <p class="menu-item text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem"
+                tabindex="-1">Other</p>
+            </div>
+          </div>
         </div>
+
+
+        <div class=" w-full pb-10">
+          <a href="getting-started-fourth.html" class="onbordingbutton w-full text-center block ">Next</a>
+        </div>
+
       </div>
-      </div>
+    </div>
+    </div>
 
 
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <script src="../scripts/script.js"></script>
-  </body>
-
-</html>
+  <script src="../scripts/script.js"></script>
 </body>
 
 </html>

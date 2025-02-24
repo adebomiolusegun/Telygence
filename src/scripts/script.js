@@ -23,6 +23,7 @@ const passwordLoginInput = document.getElementById("passwordLoginInput");
 const emailNotFound = document.getElementById("emailNotFound");
 const incorrectPassword = document.getElementById("incorrectPassword");
 const loginVerification = document.getElementById("loginVerification");
+const loginSuccess = document.querySelectorAll(".hidden-on-login");
 const otpInputs = document.querySelectorAll(".verificationinput");
 const menuItem = document.querySelectorAll(".menu-item");
 const resetBtn = document.querySelector(".resetBtn");
@@ -265,6 +266,14 @@ if (emailLoginInput && passwordLoginInput && loginVerification) {
       window.location.href = "getting-started.html";
     }
   });
+}
+
+if (isEmailValid && isPasswordValid) {
+  loginSuccess.forEach((el) => {
+    el.classList.remove("hidden");
+  });
+
+  window.location.href = "";
 }
 
 if (resetBtn) {

@@ -21,9 +21,23 @@
 
         <div class="hidden md:flex space-x-6 text-[18px] font-light">
           <a href="">Features</a>
+          <div class="hidden hidden-on-login">
+            <a href="">Features</a>
+            <svg id="gettingStartedArrowDown" class="w-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
           <a href="">Sync with app</a>
           <a href="">Extension</a>
           <a href="support.html">Support</a>
+          <div id="supportDropdown" class="hidden hidden-on-login ">
+            <a href="support.html">Support</a>
+            <svg id="gettingStartedArrowDown" class="w-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
         </div>
 
         <div class="hidden md:flex space-x-2 items-center ">
@@ -54,11 +68,14 @@
           <a href="" class="dropdown-li-bg">service</a>
           <a href="support.html" class="dropdown-li-bg">support</a>
 
-          <div class="bg-red-500">
+          <div class="">
             <a href="login.html"
               class="flex items-center justify-center md:hidden p-3 w-2/4 mb-3 py-4 px-12 text-center rounded-full text-[10px] bg-white text-Btngradianttwo ring-2 ring-Btngradianttwo">
               Login
             </a>
+
+
+
 
             <div class=" button text-center w-44">
               <a href="">Get Extension</a>
@@ -94,6 +111,10 @@
             <a href=""
               class=" py-4 px-16  text-center rounded-full text-white text-[10px] bg-gradient-to-t from-landbtnGradiantTwo to-landbtnGradiantOne ">Get
               Started Free</a>
+
+            <a href=""
+              class="hidden-on-login hidden py-4 px-16  text-center rounded-full text-white text-[10px] bg-gradient-to-t from-landbtnGradiantTwo to-landbtnGradiantOne ">Use
+              App</a>
 
             <a href=""
               class="hidden md:flex p-3 py-4 px-16 text-center rounded-full text-[10px] bg-white text-Btngradianttwo ring-2 ring-Btngradianttwo">Add

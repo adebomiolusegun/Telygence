@@ -268,13 +268,13 @@ if (emailLoginInput && passwordLoginInput && loginVerification) {
   });
 }
 
-if (isEmailValid && isPasswordValid) {
-  loginSuccess.forEach((el) => {
-    el.classList.remove("hidden");
-  });
+// if (isEmailValid && isPasswordValid) {
+//   loginSuccess.forEach((el) => {
+//     el.classList.remove("hidden");
+//   });
 
-  window.location.href = "";
-}
+//   window.location.href = "getting-started.html";
+// }
 
 if (resetBtn) {
   passwordInput.addEventListener("input", function () {
@@ -308,17 +308,6 @@ if (otpInputs) {
       }
     });
   });
-
-  // const clearOtp = () => {
-  //   otpInputs.forEach((input) => (input.value = ""));
-  //   otpInputs[0].focus();
-  // };
-
-  // // const clearButton = document.createElement("button");
-  // // clearButton.textContent = "Clear OTP";
-  // // clearButton.className = "onbordingbutton mt-5";
-  // // clearButton.addEventListener("click", clearOtp);
-  // // document.querySelector(".pb-10").appendChild(clearButton);
 }
 
 for (let i = 0; i < faqDropdowns.length; i++) {
@@ -329,7 +318,6 @@ for (let i = 0; i < faqDropdowns.length; i++) {
     const faqArrowUp = this.querySelector(".faqArrowUp");
     const faqArrowDown = this.querySelector(".faqArrowDown");
 
-    // Hide all FAQ answers and show all arrow ups
     for (let j = 0; j < faqAnswers.length; j++) {
       if (faqAnswers[j] !== faqAnswer) {
         faqAnswers[j].classList.add("hidden");
@@ -338,7 +326,6 @@ for (let i = 0; i < faqDropdowns.length; i++) {
       }
     }
 
-    // Toggle the current FAQ answer and arrows
     if (faqAnswer.classList.contains("hidden")) {
       faqAnswer.classList.remove("hidden");
       faqArrowUp.classList.add("hidden");
